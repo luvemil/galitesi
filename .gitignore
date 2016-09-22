@@ -1,0 +1,14 @@
+*.aux
+ClassicThesis.aux
+ClassicThesis.bbl
+ClassicThesis.blg
+ClassicThesis.lof
+*.log
+ClassicThesis.lol
+ClassicThesis.lot
+ClassicThesis.out
+ClassicThesis.toc
+gfx/interaction.pdf
+gfx/images_*img*.png
+*.ps.pdf
+*Rhistory*

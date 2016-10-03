@@ -1,0 +1,36 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqzzcc}{rgb}{0.,0.6,0.8}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.635220622502833,-4.254300351697167) rectangle (5.400163433833409,5.168861348801525);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-4.52,4.54) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-5.,4.) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-4.46,3.86) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-4.04,4.54) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-3.86,4.12) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-4.2,3.56) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-3.,4.) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-3.42,3.5) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (3.9,4.4) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (3.68,3.88) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (4.2,3.74) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (4.2,4.3) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (4.7,3.34) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (3.66,2.98) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (3.56,3.46) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (4.38,3.1) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (2.8,3.8) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-1.,-3.) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-0.8,-3.66) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-0.34,-3.44) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (0.48,-3.28) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (0.,-2.7) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-0.64,-2.6) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-0.06,-3.2) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-0.16,-2.12) circle (0.08cm);
+\end{tikzpicture}
+\end{document}

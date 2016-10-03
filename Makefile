@@ -21,8 +21,8 @@ $(PRINCIPALE_PDF): $(PRINCIPALE_TEX) $(BIBLIOGRAFIA) $(DEPENDS) $(PICTURES)
 	pdflatex $(PRINCIPALE)
 	pdflatex $(PRINCIPALE)
 
-#pics: $(PICTURES)
-#	make -C gfx all
+pics: $(PICTURES)
+	make -C gfx all
 
 clean:
 	rm -f $(FILE_CLEAN)

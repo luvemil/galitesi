@@ -21,18 +21,18 @@ Un modo potrebbe essere il seguente: sia
 \begin{equation*}
   X=\{x_1,\dots, x_n\}
 \end{equation*}
-il nostro insieme di dati, consideriamo per $\varepsilon>0$ l'insieme
+il nostro insieme di dati. Consideriamo per $\varepsilon>0$ l'insieme
 \begin{equation*}
-  \hat{X}_\varepsilon=\cup_{0\leq i\leq n} B(x_i,\varepsilon)
+  \widehat{X}_\varepsilon=\bigcup_{0\leq i\leq n} B(x_i,\varepsilon)
 \end{equation*}
-where $B(x_i,\varepsilon)$ è la palla di centro $x_i$ e raggio $\varepsilon$. Osserviamo che esiste un intervallo di valori $a \leq \varepsilon \leq b$ per cui $\hat{X}_\varepsilon$ appare come in \cref{fig:clusters_fat}.
+dove $B(x_i,\varepsilon)$ è la palla di centro $x_i$ e raggio $\varepsilon$. Osserviamo che esiste un intervallo di valori $a \leq \varepsilon \leq b$ per cui $\widehat{X}_\varepsilon$ appare come in \cref{fig:clusters_fat}.
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=.4\linewidth]{gfx/three_clusters_fat.pdf}
-    \caption{$\hat{X}_\varepsilon$}
+    \caption{$\widehat{X}_\varepsilon$}
     \label{fig:clusters_fat}
   \end{center}
 \end{figure}
 
-Allora possiamo possiamo calcolare il numero di componenti connesse, o equivalentemente la dimensione del gruppo di omologia $\Hg{0}(\hat{X}_\varepsilon;k)=k^3$, dove $k$ è un campo,
+Allora possiamo possiamo calcolare il numero di componenti connesse, o equivalentemente la dimensione del gruppo di omologia $\Hg{0}(\widehat{X}_\varepsilon;k)$, dove $k$ è un campo. La dimensione $\mathrm{dim}_k(\Hg{0}(\widehat{X}_\varepsilon;k))$ è 3 per un intervallo notevole di valori di $\varepsilon$, e da un certo $\overline{\varepsilon}$ in poi diventa 1.

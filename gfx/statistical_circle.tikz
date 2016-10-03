@@ -1,11 +1,12 @@
-\documentclass[crop,tikz]{standalone}\usepackage{pgf,tikz}
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
 \usepackage{mathrsfs}
 \usetikzlibrary{arrows}
 \pagestyle{empty}
 \begin{document}
 \definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\clip(-15.38490033630721,-14.181979774141341) rectangle (15.729568518609724,13.582406150971456);
+\clip(-28.09685885077918,-15.558726183651071) rectangle (26.60586515373557,15.372176483334098);
 \draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (9.66416658727075,-5.24393318233321) circle (0.15cm);
 \draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-9.609450568783913,-3.6091885045606724) circle (0.15cm);
 \draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.524130726903907,-4.0213567888232) circle (0.15cm);

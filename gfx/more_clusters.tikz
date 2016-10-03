@@ -1,0 +1,37 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqzzcc}{rgb}{0.,0.6,0.8}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-7.137626527540421,-8.263667740702843) rectangle (21.598564337925733,14.113876635383583);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-6.38,2.76) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-6.44,3.5) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-5.94,2.96) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-6.04,3.42) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-5.44,3.02) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-5.56,3.64) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-6.04,4.06) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.92,5.9) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.96,5.56) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.6,5.72) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.66,5.3) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.2,5.64) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.28,6.24) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.54,2.06) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.64,1.6) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.2,1.92) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-2.22,1.48) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-1.6,1.86) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-1.74,1.46) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-1.86,2.48) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (19.618732498542553,3.897151958988486) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (20.14769240337783,4.141287299681691) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (19.781489392338024,3.4902597244998104) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (19.65942172199142,2.8799213727667974) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (20.229070850275566,2.8799213727667974) circle (0.08cm);
+\draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (20.47320619096877,3.4088812776020756) circle (0.08cm);
+\end{tikzpicture}
+\end{document}

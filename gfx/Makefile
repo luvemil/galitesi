@@ -9,7 +9,8 @@ PICTURES = $(wildcard *.png *.jpg) statistical_circle.pdf \
 						statistical_circle_3.pdf \
 						statistical_circle_comparison.pdf \
 						three_clusters_small.pdf \
-						more_clusters.pdf
+						more_clusters.pdf \
+						three_clusters_fat.pdf
 
 all: $(PICTURES)
 

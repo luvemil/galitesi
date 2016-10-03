@@ -4,9 +4,10 @@
 \usetikzlibrary{arrows}
 \pagestyle{empty}
 \begin{document}
+\definecolor{ffwwqq}{rgb}{1.,0.4,0.}
 \definecolor{qqzzcc}{rgb}{0.,0.6,0.8}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\clip(-7.137626527540421,-8.263667740702843) rectangle (21.598564337925733,14.113876635383583);
+\clip(-7.069717601851417,-0.9076235963603158) rectangle (20.95844588222197,7.023750325728553);
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-6.38,2.76) circle (0.08cm);
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-6.44,3.5) circle (0.08cm);
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-5.94,2.96) circle (0.08cm);
@@ -33,5 +34,13 @@
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (19.65942172199142,2.8799213727667974) circle (0.08cm);
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (20.229070850275566,2.8799213727667974) circle (0.08cm);
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (20.47320619096877,3.4088812776020756) circle (0.08cm);
+\draw [line width=1.2pt,color=ffwwqq] (-5.326427975615319,0.6628936770802673)-- (-5.9301085736415065,0.6628936770802673);
+\draw [line width=1.2pt,color=ffwwqq] (-5.326427975615319,0.1308454817840366)-- (-2.617476733710796,0.1308454817840366);
+\draw [line width=1.2pt,color=ffwwqq] (-1.601512106618852,-0.40120271351219405)-- (19.729740518025775,-0.40120271351219405);
+\begin{scriptsize}
+\draw[color=ffwwqq] (-5.727943818039393,1.3286660433263953) node {$e_1$};
+\draw[color=ffwwqq] (-4.058180887073319,0.7919565298015847) node {$e_2$};
+\draw[color=ffwwqq] (9.210470975067805,0.37451579706006527) node {$e_3$};
+\end{scriptsize}
 \end{tikzpicture}
 \end{document}

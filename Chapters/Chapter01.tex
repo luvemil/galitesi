@@ -7,7 +7,7 @@ La TDA si prefigge come obiettivo quello di trovare strutture complesse in un in
 
 La novità della TDA sta nel provare a catturare la \emph{forma} dei dati e, in questa, cercare proprietà topologiche interessanti che costituiscano un segnale anziché un rumore.
 
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
     \includegraphics[width=.4\linewidth]{gfx/three_clusters_small.pdf}
     \caption{Dati divisi in più cluster}
@@ -27,7 +27,7 @@ il nostro insieme di dati. Consideriamo per $\varepsilon>0$ l'insieme
 \end{equation*}
 dove $B(x_i,\varepsilon)$ è la palla di centro $x_i$ e raggio $\varepsilon$. Osserviamo che esiste un intervallo di valori $a \leq \varepsilon \leq b$ per cui $\widehat{X}_\varepsilon$ appare come in \cref{fig:clusters_fat}.
 
-\begin{figure}
+\begin{figure}[h]
   \begin{center}
     \includegraphics[width=.4\linewidth]{gfx/three_clusters_fat.pdf}
     \caption{$\widehat{X}_\varepsilon$}
@@ -35,4 +35,4 @@ dove $B(x_i,\varepsilon)$ è la palla di centro $x_i$ e raggio $\varepsilon$. Os
   \end{center}
 \end{figure}
 
-Allora possiamo possiamo calcolare il numero di componenti connesse, o equivalentemente la dimensione del gruppo di omologia $\Hg{0}(\widehat{X}_\varepsilon;k)$, dove $k$ è un campo. La dimensione $\mathrm{dim}_k(\Hg{0}(\widehat{X}_\varepsilon;k))$ è 3 per un intervallo notevole di valori di $\varepsilon$, e da un certo $\overline{\varepsilon}$ in poi diventa 1.
+Allora possiamo possiamo calcolare il numero di componenti connesse di $\widehat{X}_\varepsilon$, o equivalentemente la dimensione del gruppo di omologia $\Hg{0}(\widehat{X}_\varepsilon;k)$, dove $k$ è un campo. L'osservazione che $X$ è composto essenzialmente da tre componenti è espressa dal fatto che $\mathrm{dim}_k(\Hg{0}(\widehat{X}_\varepsilon;k))=3$ per un intervallo notevole di valori di $\varepsilon$, e da un certo $\overline{\varepsilon}$ in poi diventa 1.

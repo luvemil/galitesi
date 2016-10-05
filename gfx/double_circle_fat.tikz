@@ -1,0 +1,95 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-10.408966860077722,-1.9393599572542466) rectangle (0.6094718013386339,4.762018310590781);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.16867166781958,2.807792373682253) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.52,2.) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.3,1.6) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.18,2.22) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.827474761370129,1.1802019090389417) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.821680454035123,1.5684205004843457) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.589908160634882,1.238144982389002) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.413076565624134,1.3232589203508884) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.825059592414086,0.7340402442434777) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.7787051337340385,1.1686132943689298) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.149540803174424,1.000578381653755) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.967502106833194,0.9078694642936586) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.187685785563423,1.1106702210188695) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.6661981254128815,1.4815058904592553) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.25142316624849,1.4815058904592553) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.712552584092929,1.9450504772597375) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.950119184828177,1.8755187892396652) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.950119184828177,2.1710284633249723) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.4981632126977065,2.5882185914454063) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.054416716858285,2.5882185914454063) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.973296414168201,2.9069054948707382) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.7473184281029654,2.5476584401003644) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.382277065997586,2.2115886146700148) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.9177685097741834,3.0169973342358527) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.5,3.) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.396280849623641,3.2603582423061055) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.228245936908466,2.941671338880774) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.236455413199515,3.034380256240871) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.935151431779201,3.358861467001208) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.688411385329984,3.0575574855808947) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.850651990710153,2.8315794995156596) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.914389371395219,2.680927508805503) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.157750279465473,2.478126752080292) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.11719012812043,1.1512303723639117) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.105601513450418,1.3598254364241287) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.541138532998791,0.9368410009686886) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.454223922973701,1.2033791383789658) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.921147648153147,1.5684205004843457) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.094976868203327,1.4351514317792071) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.6951696620879115,2.286914610025093) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.4740220139347615,3.127089173600967) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.11040938229023,2.7025983585981677) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.743804422756161,2.791772537944293) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.832978602102286,2.5341582420554873) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.288025283875966,3.0295703495339597) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.38710770537166,2.6926901164485986) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.8223379028462015,2.752139569346015) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.,3.) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.356650521816437,2.742231327196446) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.5,3.) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.791880719290978,2.791772537944293) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.009862046581506,2.7025983585981677) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.0962992444120268,2.5643067493651848) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.079219741628492,3.0295703495339597) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.5,3.) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.3198907834942073,2.7813220667096537) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.266743885363797,2.068470861025723) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.3461956704450517,0.17056203683831606) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.208095013953117,-0.11879171962097577) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.55663476605181,-0.34238325870315583) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.6811686832004233,-0.940819436834873) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-2.845988522511102,-0.6120083499493141) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.280019157200041,-0.39499303260484525) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.457577144118243,-0.829023667293783) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.983674883135138,-0.6120083499493141) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-3.5759491353970443,-0.5396699108344911) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.3979768526109435,-0.4147216978179788) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.621568391693124,-0.23716371089977697) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.904345926414705,-0.21743504568664346) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-4.8977697046769935,0.05219004555951484) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.308574225281619,0.4831521170946114) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.219400045935495,0.25526254765451406) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.121361243759174,-0.15167282830953166) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.5760967633199945,0.3840696955989169) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.635546216217412,0.6615004757868614) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.85352754350794,0.5227850856928892) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.121050081546315,0.6912252022355698) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.764353364161814,0.8200323501799727) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-5.952609965003634,1.246086762611459) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.5,1.) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-7.310039139494649,0.8101241080304031) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-6.864168242764024,0.938931255974806) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.350404565199442,1.9297554709317508) circle (0.94cm);
+\draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-8.380129291648151,2.3161769147649593) circle (0.94cm);
+\end{tikzpicture}
+\end{document}

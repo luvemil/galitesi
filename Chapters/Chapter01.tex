@@ -124,6 +124,12 @@ Nel resto del capitolo ci occuperemo di costruire l'omologia persistente, con at
 
 \section{Omologia simpliciale}
 
-Dato uno spazio topologico $X$ e un campo $k$, i gruppi di omologia $H_i(X;k)$ per $i\in\N$ sono $k$-spazi vettoriali che codificano proprietà di interesse dello spazio $X$. La dimensione di $H_0$, ad esempio, è il numero di componenti connesse di $X$, $H_1$ "conta" il numero di \emph{buchi $1$-dimensionali}, e così via.
+\begin{sloppypar}
+  Fissato un campo $k$, ad ogni spazio topologico possiamo associare una successione di $k$-spazi vettoriali $H_i(X;k)$ detti \emph{gruppi di omologia}. Per la precisione si tratta di un $\partial$-funtore (co)omologico ${H_*(-;k):\Top \to \Vectk}$. Nel resto della sezione ci occuperemo di definire in modo operativo questi gruppi.
+\end{sloppypar}
 
-Esistono diversi modi di calcolare questi gruppi. Il più generale è quello di utilizzare l'omologia singolare, tuttavia questa risulta difficilmente calcolabile perché richiede di lavorare con quozienti di spazi vettoriali di dimensione più che numerabile. Il metodo che useremo qui
+Esistono diversi modi di calcolare i gruppi di omologia. Il più generale e potente è quello di utilizzare l'omologia singolare, tuttavia questa risulta scomoda da usare in pratica perché richiede di lavorare con quozienti di spazi vettoriali di dimensione più che numerabile. Per aggirare il problema definiremo soltanto l'omologia simpliciale.
+
+In virtù degli assiomi di Eilenberg-Steenrod \cite{Eilenberg1945, Eilenberg} le due definizioni sono equivalenti (almeno per gli spazi che andremo a considerare). Per una trattazione più dettagliata si vedano \cite{Hatcher2015} o \cite{Rotman1988}.
+
+Gli spazi $\widehat{X}_\varepsilon$, usati nell'introduzione, sono comodi per introdurre un'idea intuitiva di persistenza, tuttavia non sono l'ambiente naturale in cui lavorare, quindi non verranno più usati nella trattazione formale. Si osservi, però, che l'omologia di $\widehat{X}_\varepsilon$ è equivalente all'omologia del complesso di \vCech di parametro $\varepsilon$ associato a $X$. Per questioni di comodità, tuttavia, noi lavoreremo principalmente con il complesso di Vietoris-Rips.

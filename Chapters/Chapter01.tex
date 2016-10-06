@@ -83,7 +83,7 @@ Il grafico fa interpretato nel seguente modo: all'inizio vi sono 26 punti distin
 
 Possiamo sempre usare questa rappresentazione grazie alla decomposizione dei persistence barcodes garantita dal teorema (NMDC: aggiungere riferimento).
 
-Un altro aspetto che l'omologia persistente cattura è la relazione fra i gruppi di omologia nelle diverse scale, in particolare $H_*(\widehat{X}_\varepsilon;k)$ è funtoriale rispetto all'ordine di $(\mathbb{R},\leq)$, cioé se $\varepsilon_1 \leq \varepsilon_2$ allora c'è una mappa $H_*(\widehat{X}_{\varepsilon_1};k)\to H_*(\widehat{X}_{\varepsilon_2};k)$ e se $\varepsilon_1\leq\varepsilon_2\leq\varepsilon_3$, allora la mappa associata a $\varepsilon_1\leq\varepsilon_3$ è uguale alla composizione delle due mappe associate a $\varepsilon_1\leq\varepsilon_2$ e $\varepsilon_2\leq\varepsilon_3$.
+Un altro aspetto che l'omologia persistente cattura è la relazione fra i gruppi di omologia nelle diverse scale, in particolare $H_*(\widehat{X}_\varepsilon;k)$ è funtoriale rispetto all'ordine di $(\R,\leq)$, cioé se $\varepsilon_1 \leq \varepsilon_2$ allora c'è una mappa $H_*(\widehat{X}_{\varepsilon_1};k)\to H_*(\widehat{X}_{\varepsilon_2};k)$ e se $\varepsilon_1\leq\varepsilon_2\leq\varepsilon_3$, allora la mappa associata a $\varepsilon_1\leq\varepsilon_3$ è uguale alla composizione delle due mappe associate a $\varepsilon_1\leq\varepsilon_2$ e $\varepsilon_2\leq\varepsilon_3$.
 
 Questo ci consente di catturare proprietà come quelle che si osservano in \cref{fig:doublecircle}.
 
@@ -95,7 +95,7 @@ Questo ci consente di catturare proprietà come quelle che si osservano in \cref
   \end{center}
 \end{figure}
 
-In \cref{fig:doublecirclecomparison} osserviamo che al variare di $\varepsilon$ la dimensione di $H_1(\widehat{X}_\varepsilon;k)$ resta 1, tuttavia è chiaro che i due anelli sono due proprietà distinte dei dati. Questa distinzione non è racchiusa nel gruppo di omologia $H_1$, mentre la si vede dal fatto che la mappa
+In fig. \ref{fig:doublecirclecomparison} osserviamo che al variare di $\varepsilon$ la dimensione di $H_1(\widehat{X}_\varepsilon;k)$ resta 1, tuttavia è chiaro che i due anelli sono due proprietà distinte dei dati. Questa distinzione non è racchiusa nel gruppo di omologia $H_1$, mentre la si vede dal fatto che la mappa
 \begin{equation*}
 H_1(\widehat{X}_{\varepsilon_1};k)\xto{0}H_1(\widehat{X}_{\varepsilon_2};k)
 \end{equation*}
@@ -116,6 +116,14 @@ associata a $\varepsilon_1\leq\varepsilon_2$ è il morfismo nullo. Questo ci dic
   \label{fig:doublecirclecomparison}
 \end{figure}
 
+(NMDC:dire qualcosa sull'algoritmo Mapper?)
+
+Nel resto del capitolo ci occuperemo di costruire l'omologia persistente, con attenzione all'aspetto computazionale.
+
 \clearpage
 
 \section{Omologia simpliciale}
+
+Dato uno spazio topologico $X$ e un campo $k$, i gruppi di omologia $H_i(X;k)$ per $i\in\N$ sono $k$-spazi vettoriali che codificano proprietà di interesse dello spazio $X$. La dimensione di $H_0$, ad esempio, è il numero di componenti connesse di $X$, $H_1$ "conta" il numero di \emph{buchi $1$-dimensionali}, e così via.
+
+Esistono diversi modi di calcolare questi gruppi. Il più generale è quello di utilizzare l'omologia singolare, tuttavia questa risulta difficilmente calcolabile perché richiede di lavorare con quozienti di spazi vettoriali di dimensione più che numerabile. Il metodo che useremo qui

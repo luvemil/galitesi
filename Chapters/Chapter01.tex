@@ -17,7 +17,7 @@ La novità della TDA sta nel provare a catturare la \emph{forma} dei dati e, in 
 
 Ad esempio, consideriamo un insieme di dati come in \cref{fig:clusters}. È chiaro a chi osserva che vi sono tre gruppi di punti, tuttavia la formalizzazione matematica di questa osservazione non è immediata.
 
-Un modo potrebbe essere il seguente: sia
+Il modo usato dalla TDA è l'\emph{omologia persistente}, di cui diamo un'introduzione informale per poi riprenderlo in (NMDC: inserire riferimento al capitolo). Sia
 \begin{equation*}
   X=\{x_1,\dots, x_n\}
 \end{equation*}
@@ -46,7 +46,7 @@ Ovviamente, non è necessario parlare di dimensione del gruppo di omologia $H_{0
 \begin{figure}[h]
   \begin{center}
     \includegraphics[width=\linewidth]{gfx/statistical_circle.pdf}
-    \caption{Campionamento con rumore da un cerchio}
+    \caption{Campionamento da una corona circolare}
     \label{fig:circle}
   \end{center}
 \end{figure}
@@ -60,3 +60,62 @@ Ancora una volta possiamo considerare l'insieme $\widehat{X}_\varepsilon$ per di
     \label{fig:circlecomparison}
   \end{center}
 \end{figure}
+
+La dimensione di $H_1(\widehat{X}_\varepsilon;k)$ varia fino a stabilizzarsi su 1. Questo ci dice che c'è essenzialmente un buco 1-dimensionale nei dati.
+
+Possiamo anche osservare variazioni di struttura al variare della scala di riferimento. Ad esempio, in \cref{fig:moreclusters} possiamo vedere che i tre cluster sulla sinistra collassano in un unico cluster se condiseriamo $\widehat{X}_\varepsilon$ per $\varepsilon \gtrsim e_2/2$.
+
+\begin{figure}[h]
+  \includegraphics[width=.7\paperwidth]{gfx/more_clusters.pdf}
+  \caption{Cluster su scale diverse}
+  \label{fig:moreclusters}
+\end{figure}
+
+Per visualizzare l'andamento di $dim_k(\widehat{X}_\varepsilon)$ al variare di $\varepsilon$ usiamo un tipo di grafico chiamato \emph{persistence barcode}: per ogni \emph{feature} presente nei dati, disegnamo un segmento orizzontale lungo quanto l'intervallo di lunghezze di $\varepsilon$ in cui la feature persiste, come in \cref{fig:moreclusterbarcode}.
+
+\begin{figure}[h]
+  \includegraphics[width=.7\paperwidth]{gfx/more_clusters_barcodes.pdf}
+  \caption{Un esempio di persistence barcode}
+  \label{fig:moreclusterbarcode}
+\end{figure}
+
+Il grafico fa interpretato nel seguente modo: all'inizio vi sono 26 punti distinti, al crescere di $\varepsilon$ questi punti vengono uniti ad altri e quindi il numero si riduce, finché per $\varepsilon \gtrsim e_1/2$ restano essenzialmente 4 cluster, da $e_2/2$ ne restano solo due e da $e_3/2$ il gruppo di omologia $H_0(\widehat{X}_\varepsilon;k)$ diventa banale. (NMDC: aggiusta il grafico del barcode)
+
+Possiamo sempre usare questa rappresentazione grazie alla decomposizione dei persistence barcodes garantita dal teorema (NMDC: aggiungere riferimento).
+
+Un altro aspetto che l'omologia persistente cattura è la relazione fra i gruppi di omologia nelle diverse scale, in particolare $H_*(\widehat{X}_\varepsilon;k)$ è funtoriale rispetto all'ordine di $(\mathbb{R},\leq)$, cioé se $\varepsilon_1 \leq \varepsilon_2$ allora c'è una mappa $H_*(\widehat{X}_{\varepsilon_1};k)\to H_*(\widehat{X}_{\varepsilon_2};k)$ e se $\varepsilon_1\leq\varepsilon_2\leq\varepsilon_3$, allora la mappa associata a $\varepsilon_1\leq\varepsilon_3$ è uguale alla composizione delle due mappe associate a $\varepsilon_1\leq\varepsilon_2$ e $\varepsilon_2\leq\varepsilon_3$.
+
+Questo ci consente di catturare proprietà come quelle che si osservano in \cref{fig:doublecircle}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics{gfx/double_circle_small.pdf}
+    \caption{Un doppio anello}
+    \label{fig:doublecircle}
+  \end{center}
+\end{figure}
+
+In \cref{fig:doublecirclecomparison} osserviamo che al variare di $\varepsilon$ la dimensione di $H_1(\widehat{X}_\varepsilon;k)$ resta 1, tuttavia è chiaro che i due anelli sono due proprietà distinte dei dati. Questa distinzione non è racchiusa nel gruppo di omologia $H_1$, mentre la si vede dal fatto che la mappa
+\begin{equation*}
+H_1(\widehat{X}_{\varepsilon_1};k)\xto{0}H_1(\widehat{X}_{\varepsilon_2};k)
+\end{equation*}
+associata a $\varepsilon_1\leq\varepsilon_2$ è il morfismo nullo. Questo ci dice che non ci sono relazioni fra i due gruppi di omologia.
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{subfigure}[b]{.4\textwidth}
+      \includegraphics[width=\textwidth]{gfx/double_circle_medium.pdf}
+      \caption{$\widehat{X}_{\varepsilon_1}$}
+    \end{subfigure}
+    \begin{subfigure}[b]{.4\textwidth}
+      \includegraphics[width=\textwidth]{gfx/double_circle_fat.pdf}
+      \caption{$\widehat{X}_{\varepsilon_2}$}
+    \end{subfigure}
+    \caption{Variazione delle proprietà di $\widehat{X}_\varepsilon$}
+  \end{center}
+  \label{fig:doublecirclecomparison}
+\end{figure}
+
+\clearpage
+
+\section{Omologia simpliciale}

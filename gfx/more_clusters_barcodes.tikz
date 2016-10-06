@@ -1,0 +1,45 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-7.218221431413229,-2.716610544720895) rectangle (42.43826158962273,27.484299620532244);
+\draw [line width=1.2pt] (1.,3.)-- (6.,3.);
+\draw [line width=1.2pt] (1.,4.)-- (6.,4.);
+\draw [line width=1.2pt] (1.,5.)-- (1.3,5.);
+\draw [line width=1.2pt] (1.,6.)-- (1.6902603692767373,6.);
+\draw [line width=1.2pt] (1.,7.)-- (1.6365921066154783,7.);
+\draw [line width=1.2pt] (1.,8.)-- (1.0132214221339577,8.);
+\draw [line width=1.2pt] (1.,9.)-- (1.693567701143245,9.);
+\draw [line width=1.2pt] (1.,10.)-- (1.6675351894410526,10.);
+\draw [line width=1.2pt] (1.,11.)-- (1.3592109660478322,11.);
+\draw [line width=1.2pt] (1.,12.)-- (1.586262367170745,12.);
+\draw [line width=1.2pt] (1.,13.)-- (1.0438530948938152,13.);
+\draw [line width=1.2pt] (1.,14.)-- (1.26559550416114,14.);
+\draw [line width=1.2pt] (1.,15.)-- (1.159562460342559,15.);
+\draw [line width=1.2pt] (1.,16.)-- (1.0338261511967786,16.);
+\draw [line width=1.2pt] (1.,17.)-- (1.584751996448345,17.);
+\draw [line width=1.2pt] (1.,18.)-- (1.1615887333437278,18.);
+\draw [line width=1.2pt] (1.,19.)-- (1.1960237745419546,19.);
+\draw [line width=1.2pt] (1.,20.)-- (1.3269766619206707,20.);
+\draw [line width=1.2pt] (1.,21.)-- (1.605919845450722,21.);
+\draw [line width=1.2pt] (1.,22.)-- (1.0279848043556186,22.);
+\draw [line width=1.2pt] (1.,23.)-- (1.4174564040010085,23.);
+\draw [line width=1.2pt] (1.,24.)-- (1.159739650573492,24.);
+\draw [line width=1.2pt] (1.,25.)-- (1.2179871313357764,25.);
+\draw [line width=1.2pt] (1.,26.)-- (1.3852716075561622,26.);
+\draw [line width=1.2pt] (1.,2.)-- (31.,2.);
+\draw [line width=1.2pt] (1.,1.)-- (33.,1.);
+\draw (0.5,0.)-- (33.,0.);
+\begin{scriptsize}
+\draw [color=black] (6.,0.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=black] (6.050642064371789,-0.8850189578793971) node {$e_2$};
+\draw [color=black] (31.,0.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=black] (31.0009896806792,-0.7222108168268196) node {$e_3$};
+\draw [color=black] (1.7,0.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
+\draw[color=black] (1.6548222559522123,-0.8443169226162529) node {$e_1$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

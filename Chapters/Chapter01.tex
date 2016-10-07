@@ -95,7 +95,7 @@ Questo ci consente di catturare proprietà come quelle che si osservano in \cref
   \end{center}
 \end{figure}
 
-In fig. \ref{fig:doublecirclecomparison} osserviamo che al variare di $\varepsilon$ la dimensione di $H_1(\widehat{X}_\varepsilon;k)$ resta 1, tuttavia è chiaro che i due anelli sono due proprietà distinte dei dati. Questa distinzione non è racchiusa nel gruppo di omologia $H_1$, mentre la si vede dal fatto che la mappa
+In \cref{fig:doublecirclecomparison} osserviamo che al variare di $\varepsilon$ la dimensione di $H_1(\widehat{X}_\varepsilon;k)$ resta 1, tuttavia è chiaro che i due anelli sono due proprietà distinte dei dati. Questa distinzione non è racchiusa nel gruppo di omologia $H_1$, mentre la si vede dal fatto che la mappa
 \begin{equation*}
 H_1(\widehat{X}_{\varepsilon_1};k)\xto{0}H_1(\widehat{X}_{\varepsilon_2};k)
 \end{equation*}
@@ -111,9 +111,8 @@ associata a $\varepsilon_1\leq\varepsilon_2$ è il morfismo nullo. Questo ci dic
       \includegraphics[width=\textwidth]{gfx/double_circle_fat.pdf}
       \caption{$\widehat{X}_{\varepsilon_2}$}
     \end{subfigure}
-    \caption{Variazione delle proprietà di $\widehat{X}_\varepsilon$}
+    \caption{Variazione delle proprietà di $\widehat{X}_\varepsilon$}  \label{fig:doublecirclecomparison}
   \end{center}
-  \label{fig:doublecirclecomparison}
 \end{figure}
 
 (NMDC:dire qualcosa sull'algoritmo Mapper?)
@@ -125,11 +124,11 @@ Nel resto del capitolo ci occuperemo di costruire l'omologia persistente, con at
 \section{Omologia simpliciale}
 
 \begin{sloppypar}
-  Fissato un campo $k$, ad ogni spazio topologico possiamo associare una successione di $k$-spazi vettoriali $H_i(X;k)$ detti \emph{gruppi di omologia}. Per la precisione si tratta di un $\partial$-funtore (co)omologico ${H_*(-;k):\Top \to \Vectk}$. Nel resto della sezione ci occuperemo di definire in modo operativo questi gruppi.
+  Fissato un campo $k$, ad ogni spazio topologico possiamo associare una successione di $k$-spazi vettoriali $H_i(X;k)$ detti \emph{gruppi di omologia}. Per la precisione si tratta di una successione di funtori ${H_*(-;k):\Top \to \Vectk}$. Nel resto della sezione ci occuperemo di definire in modo operativo questi gruppi.
 \end{sloppypar}
 
-Esistono diversi modi di calcolare i gruppi di omologia. Il più generale e potente è quello di utilizzare l'omologia singolare, tuttavia questa risulta scomoda da usare in pratica perché richiede di lavorare con quozienti di spazi vettoriali di dimensione più che numerabile. Per aggirare il problema definiremo soltanto l'omologia simpliciale.
+Esistono diversi modi di calcolare i gruppi di omologia. Il più generale e potente è l'omologia singolare, tuttavia questa risulta scomoda da usare in pratica perché richiede di lavorare con quozienti di spazi vettoriali di dimensione più che numerabile. Per aggirare il problema definiremo soltanto l'omologia simpliciale.
 
 In virtù degli assiomi di Eilenberg-Steenrod \cite{Eilenberg1945, Eilenberg} le due definizioni sono equivalenti (almeno per gli spazi che andremo a considerare). Per una trattazione più dettagliata si vedano \cite{Hatcher2015} o \cite{Rotman1988}.
 
-Gli spazi $\widehat{X}_\varepsilon$, usati nell'introduzione, sono comodi per introdurre un'idea intuitiva di persistenza, tuttavia non sono l'ambiente naturale in cui lavorare, quindi non verranno più usati nella trattazione formale. Si osservi, però, che l'omologia di $\widehat{X}_\varepsilon$ è equivalente all'omologia del complesso di \v{C}ech di parametro $\varepsilon$ associato a $X$. Per questioni di comodità, tuttavia, noi lavoreremo principalmente con il complesso di Vietoris-Rips.
+Gli spazi $\widehat{X}_\varepsilon$ usati nell'introduzione sono comodi per introdurre un'idea intuitiva di persistenza, tuttavia non sono l'ambiente naturale in cui lavorare, quindi non verranno più usati nella trattazione formale. Si osservi, però, che l'omologia di $\widehat{X}_\varepsilon$ è equivalente all'omologia del complesso di \v{C}ech di parametro $\varepsilon$ associato a $X$. Per questioni di comodità, tuttavia, noi lavoreremo principalmente con il complesso di Vietoris-Rips.

@@ -135,6 +135,8 @@ Si procederà associando all'insieme di dati $X$ uno spazio topologico (detto co
 
 Gli spazi $\widehat{X}_\varepsilon$ usati nell'introduzione, sebbene comodi per introdurre un'idea intuitiva di persistenza, non sono l'ambiente naturale in cui lavorare, quindi non verranno più usati nella trattazione formale. Si osservi, però, che l'omologia di $\widehat{X}_\varepsilon$ è equivalente all'omologia del complesso simpliciale di \v{C}ech di parametro $\varepsilon$ associato a $X$. Per questioni di comodità, tuttavia, noi lavoreremo principalmente con il complesso di Vietoris-Rips.
 
+\subsection{Complessi simpliciali}
+
 \begin{sloppypar}
   I complessi simpliciali sono particolari spazi topologici che hanno una descrizione combinatorica. Dato un insieme di punti ${S=\{s_0,\dots,s_n\}}$ in $\R^k$ diremo che sono in posizione generale se non sono contenuti in nessun sottospazio affine di dimensione minore di $n$. Se $S$ è in posizione generale, il suo inviluppo convesso $\sigma(S)$ è detto \emph{($n$-)simplesso generato da $S$}. I punti $s_i$ di $S$ si chiamano \emph{vertici} di $\sigma(S)$. Se $\emptyset\neq T$ è un sottinsieme di $S$, $\sigma(T)$ è detto \emph{faccia} di $\sigma(S)$.
 \end{sloppypar}
@@ -151,7 +153,7 @@ Un \emph{complesso simpliciale} (finito) $K$ è una famiglia finita di simplessi
 \`E chiaro che un complesso simpliciale è determinato essenzialmente da proprietà combinatoriche dell'insieme dei suoi vertici, che motiva la seguente costruzione astratta.
 
 \begin{defn}
-  Un \emph{complesso simpliciale astratto} $X$ è il dato di $(V(X), \Sigma(X))$, dove $V(X)$ è un insieme finito, i cui elementi sono i \emph{vertici} di $X$, e $\Sigma(X)$ è una famiglia di sottinsiemi non vuoti di $V(X)$, i cui elementi sono detti \emph{simplessi} di $X$, tale che se $\sigma \in \Sigma(X)$ e $\emptyset\neq\tau\subseteq\sigma$, allora $\tau\in\Sigma(X)$.
+  Un \emph{complesso simpliciale astratto} $X$ è il dato della coppia $(V(X), \Sigma(X))$, dove $V(X)$ è un insieme finito, i cui elementi sono i \emph{vertici} di $X$, e $\Sigma(X)$ è una famiglia di sottinsiemi non vuoti di $V(X)$, i cui elementi sono detti \emph{simplessi} di $X$, tale che se $\sigma \in \Sigma(X)$ e $\emptyset\neq\tau\subseteq\sigma$, allora $\tau\in\Sigma(X)$.
 \end{defn}
 
 \begin{rmk}
@@ -163,3 +165,7 @@ Possiamo anche definire i morfismi $f:X\to Y$ fra complessi simpliciali astratti
 (NMDC: inserire qualche disegno, eventualmente un riferimento a qualche testo sugli oggetti simpliciali)
 
 Ad ogni complesso simpliciale astratto $X$ si può associare un complesso simpliciale $|X|$ detto la \emph{realizzazione geometrica} di $X$ (NMDC: aggiungere un riferimento) e tale che i morfismi $f:X\to Y$ siano mandati in mappe continue $|f|:|X|\to |Y|$ in maniera funtoriale, cioé $|g\circ f|=|g|\circ |f|$. Inoltre, ogni complesso simpliciale $K$ è omeomorfo alla realizzazione geometrica del complesso simpliciale astratto $\widehat{K}$ ad esso associato.
+
+\subsection{Omologia simpliciale}
+
+Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratto.

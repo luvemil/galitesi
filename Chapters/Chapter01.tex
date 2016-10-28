@@ -153,7 +153,11 @@ Un \emph{complesso simpliciale} (finito) $K$ è una famiglia finita di simplessi
 \`E chiaro che un complesso simpliciale è determinato essenzialmente da proprietà combinatoriche dell'insieme dei suoi vertici, che motiva la seguente costruzione astratta.
 
 \begin{defn}
-  Un \emph{complesso simpliciale astratto} $X$ è il dato della coppia $(V(X), \Sigma(X))$, dove $V(X)$ è un insieme finito, i cui elementi sono i \emph{vertici} di $X$, e $\Sigma(X)$ è una famiglia di sottinsiemi non vuoti di $V(X)$, i cui elementi sono detti \emph{simplessi} di $X$, tale che se $\sigma \in \Sigma(X)$ e $\emptyset\neq\tau\subseteq\sigma$, allora $\tau\in\Sigma(X)$.
+  Un \emph{complesso simpliciale astratto} $X$ è il dato della coppia $(V(X), \Sigma(X))$, dove $V(X)$ è un insieme finito, i cui elementi sono i \emph{vertici} di $X$, e $\Sigma(X)$ è una famiglia di sottinsiemi non vuoti di $V(X)$, i cui elementi sono detti \emph{simplessi} di $X$, tale che:
+  \begin{enumerate}
+    \item se $v\in V(x)$ allora $\{v\}\in\Sigma(X)$, e
+    \item se $\sigma \in \Sigma(X)$ e $\emptyset\neq\tau\subseteq\sigma$, allora $\tau\in\Sigma(X)$.
+  \end{enumerate}
 \end{defn}
 
 \begin{rmk}
@@ -189,7 +193,7 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
   Nella definizione precedente si è tenuta traccia dell'ordine dei vertici dei complessi simpliciali perché esso è importante ai fini dell'omologia, dunque d'ora in poi consideriamo sempre i complessi simpliciali ordinati.
 \end{rmk}
 
-\begin{lemma}
+\begin{lemma}\label{lemma:sollcicli}
   Dati due complessi simpliciali astratti $X$ e $Y$ e un morfismo $f$ fra essi, allora $f$ induce un omomorfismo $f_q:C_q(X)\to C_q(Y)$ per ogni $q\in\mathbb{N}$ definito da:
   \begin{align*}
     f_q:C_q(X)\longrightarrow & C_q(Y)\\

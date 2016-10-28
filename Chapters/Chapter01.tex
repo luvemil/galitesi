@@ -194,7 +194,7 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
 \end{rmk}
 
 \begin{lemma}\label{lemma:sollcicli}
-  Dati due complessi simpliciali astratti $X$ e $Y$ e un morfismo $f$ fra essi, allora $f$ induce un omomorfismo $f_q:C_q(X)\to C_q(Y)$ per ogni $q\in\mathbb{N}$ definito da:
+  Dati due complessi simpliciali astratti $X$ e $Y$ e un morfismo $f$ fra essi, allora $f$ induce un omomorfismo $f_q:C_q(X)\to C_q(Y)$ per ogni $q\in\N$ definito da:
   \begin{align*}
     f_q:C_q(X)\longrightarrow & C_q(Y)\\
     [v_0,\dots,v_q] \mapsto & [f(v_0),\dots,f(v_q)].
@@ -205,4 +205,27 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
 
 \begin{rmk}
   Il motivo per cui il gruppo dei $q$-cicli è stato introdotto mediante generatori e relazioni è che in questo modo è più facile sollevare mappe di complessi simpliciali astratti a omomorfismi fra i gruppi dei cicli. Se avessimo semplicemente definito il gruppo dei $q$-cicli come il $k$-modulo generato da $X_q$ sarebbe stato necessario modificare la definizione di $f_*$ in modo che i cicli mappassero correttamente, perdendo notevolmente in eleganza.
+\end{rmk}
+
+\begin{defn}
+  Sia $X$ un complesso simpliciale astratto, allora esistono morfismi $\partial^X_q:C_q(X) \to C_{q-1}(X)$ per ogni $q\in\N_0$ definiti come:
+  \begin{equation*}
+    \partial_q([v_0,\dots,v_q])=\sum_{i=0}^q (-1)^i[v_0,\dots,\widehat{v}_i,\dots,v_q]
+  \end{equation*}
+  dove la notazione $\widehat{v}_i$ significa che l'$i$-mo elemento non è presente. Scriveremo $\partial$ invece che $\partial^X$ quando non è necessario specificare il complesso simpliciale sottostante.
+\end{defn}
+
+\begin{lemma}
+  Nelle notazioni precedenti, $\partial_{q-1}\circ \partial_q=0$.
+\end{lemma}
+
+\begin{rmk}
+  Il lemma precedente ci dice che per ogni complesso simpliciale astratto $X$ i suoi cicli $C_*(X)$ formano un complesso di $k$-moduli. Allora data una mappa di complessi simpliciali astratti $f:X\to Y$, il suo sollevamento $f_*:C_*(X)\to C_*(Y)$ è un morfismo di complessi di $k$-moduli, cioé $f_{q-1}\circ \partial^X_q=\partial^Y_q\circ f_q$. Quest'ultima proprietà può essere espressa dicendo che il seguente diagramma è commutativo (cioé che qualsiasi percorso si segua componendo i morfismi non cambia il risultato della composizione).
+  \begin{equation*}
+    \begin{tikzcd}
+      C_q(X)\arrow[r,"\partial^X_q"]\arrow[d,"f_q"]
+        &C_{q-1}(X)\arrow[d,"f_{q-1}"]\\
+      C_q(Y)\arrow[r,"\partial^Y_q"]&C_{q-1}(Y)
+    \end{tikzcd}
+  \end{equation*}
 \end{rmk}

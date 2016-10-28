@@ -171,5 +171,34 @@ Ad ogni complesso simpliciale astratto $X$ si può associare un complesso simpli
 Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratto.
 
 \begin{defn}
-  Sia $X=(V(X),\Sigma(X))$ un complesso simpliciale astratto, insieme con un ordine totale sull'insieme $V(X)$. Il gruppo dei \emph{$q$-cicli} di $X$ è il 
+  Sia $k$ un gruppo o un campo o un anello e
+  sia $X=(V(X),\Sigma(X))$ un complesso simpliciale astratto, insieme con un ordine totale sull'insieme $V(X)$. Il gruppo dei \emph{$q$-cicli} di $X$ su $k$ è il $k$-modulo $C_q(X)$ generato dagli elementi
+  \begin{itemize}
+    \item $[v_0,\dots, v_q]$ con $v_0,\dots, v_q\in V(X)$ e tali che $\{v_0,\dots,v_q\}\in\Sigma(X)$
+  \end{itemize}
+  modulo le seguenti relazioni:
+  \begin{enumerate}
+    \item $[v_0,\dots,v_q]=0$ se $v_i = v_j$ per qualche $i\neq j$,
+    \item $[v_{\sigma(0)},\dots,v_{\sigma(q)}]=sign(\sigma)[v_0,\dots,v_q]$ per ogni permutazione $\sigma$ di $\{0,\dots,q\}$.
+  \end{enumerate}
+
+  Scriveremo $C_*$ per indicare tutti i gruppi dei cicli in tutti i gradi.
 \end{defn}
+
+\begin{rmk}
+  Nella definizione precedente si è tenuta traccia dell'ordine dei vertici dei complessi simpliciali perché esso è importante ai fini dell'omologia, dunque d'ora in poi consideriamo sempre i complessi simpliciali ordinati.
+\end{rmk}
+
+\begin{lemma}
+  Dati due complessi simpliciali astratti $X$ e $Y$ e un morfismo $f$ fra essi, allora $f$ induce un omomorfismo $f_q:C_q(X)\to C_q(Y)$ per ogni $q\in\mathbb{N}$ definito da:
+  \begin{align*}
+    f_q:C_q(X)\longrightarrow & C_q(Y)\\
+    [v_0,\dots,v_q] \mapsto & [f(v_0),\dots,f(v_q)].
+  \end{align*}
+
+  Scriveremo $f_*:C_*(X)\to C_*(Y)$ per indicare tutti questi morfismi.
+\end{lemma}
+
+\begin{rmk}
+  Il motivo per cui il gruppo dei $q$-cicli è stato introdotto mediante generatori e relazioni è che in questo modo è più facile sollevare mappe di complessi simpliciali astratti a omomorfismi fra i gruppi dei cicli. Se avessimo semplicemente definito il gruppo dei $q$-cicli come il $k$-modulo generato da $X_q$ sarebbe stato necessario modificare la definizione di $f_*$ in modo che i cicli mappassero correttamente, perdendo notevolmente in eleganza.
+\end{rmk}

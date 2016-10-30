@@ -1,0 +1,27 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-0.28826699902484537,-0.7195405244797429) rectangle (2.388918711446133,1.4452872310562703);
+\draw (0.,1.)-- (0.,0.);
+\draw (0.8452994616207485,0.)-- (2.,0.);
+\draw (2.,0.)-- (1.4226497308103743,1.);
+\draw (1.4226497308103743,1.)-- (0.8452994616207485,0.);
+\begin{scriptsize}
+\draw [fill=uuuuuu] (0.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (0.030225783772564123,0.06515183893416375) node {$A$};
+\draw [fill=uuuuuu] (0.,1.) circle (1.5pt);
+\draw[color=uuuuuu] (0.030225783772564123,1.0667885616448565) node {$B$};
+\draw [fill=uuuuuu] (2.,0.) circle (1.5pt);
+\draw[color=uuuuuu] (2.0334992291939513,0.06515183893416375) node {$D$};
+\draw [fill=uuuuuu] (1.4226497308103743,1.) circle (1.5pt);
+\draw[color=uuuuuu] (1.456519550213137,1.0667885616448565) node {$C$};
+\draw [fill=uuuuuu] (0.8452994616207485,0.) circle (1.5pt);
+\draw[color=uuuuuu] (0.8241498220501646,0.07438351379785677) node {$E$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

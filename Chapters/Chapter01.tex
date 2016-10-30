@@ -228,4 +228,68 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
       C_q(Y)\arrow[r,"\partial^Y_q"]&C_{q-1}(Y)
     \end{tikzcd}
   \end{equation*}
+
+  Possiamo visualizzare $C_*(X)$ come la seguente successione:
+  \begin{equation*}
+    \begin{tikzcd}
+      \dots \arrow{r}&
+        C_2\arrow{r}{\partial_2}&
+          C_1\arrow{r}{\partial_1}&
+            C_0
+    \end{tikzcd}
+  \end{equation*}
+  a cui per completezza aggiungeremo il morfismo $\partial_0:C_0\to 0$.
 \end{rmk}
+
+\begin{defn}
+  Dato un complesso impliciale astratto $X$, per ogni $q\in\N_0$ vale $Im\,\partial_q \subseteq Ker\,\partial_{q-1}$. Definiamo il $q$-mo gruppo di omologia di $X$ come il quoziente
+  \begin{equation*}
+    H_q(X) = \frac{Ker\,\partial_q}{Im\,\partial_{q+1}}.
+  \end{equation*}
+\end{defn}
+
+Il seguente esempio serve a mostrare intuitivamente come l'omologia è collegata alle proprietà geometriche di un complesso simpliciale. Consideriamo il complesso simpliciale astratto $X=(V(X),\Sigma(X))$ con:
+\begin{align*}
+  V(X) &= ( A,B,C,D,E )\\
+  \Sigma(X) &= \{ \{A\}, \{B\}, \{C\}, \{D\}, \{E\}, \{A,B\}, \{C,D\}, \{D,E\}, \{C,E\} \}
+\end{align*}
+rappresentato in figura \cref{fig:simplicialcomplex}. La scrittura $(A,\dots,E)$ indica che l'ordine è $A<\dots<E$.
+
+\begin{figure}[h]
+  \includegraphics[width=.7\linewidth]{gfx/example_homology.pdf}
+  \caption{Un complesso simpliciale}
+  \label{fig:simplicialcomplex}
+\end{figure}
+
+Allora $C_0$ è lo spazio vettoriale generato da $[A], [B], [C], [D], [E]$ e $C_1$ da $[A,B], [C,D], [D,E], [C,E]$.
+Applicando il differenziale $\partial_1$ ai generatori di $C_1$ otteniamo:
+\begin{align*}
+  \partial_1([A,B]) &= [B] - [A]\\
+  \partial_1([C,D]) &= [D] - [C]\\
+  \partial_1([D,E]) &= [E] - [D]\\
+  \partial_1([C,E]) &= [E] - [C]
+\end{align*}
+
+Per semplicità, si può anche scrivere $\partial_1$ in forma matriciale come
+\begin{equation*}
+  \bordermatrix{
+     & [A,B] & [C,D] & [D,E] & [C,E]\cr
+    [A] & -1 & 0 & 0 & 0 \cr
+    [B] & 1 & 0 & 0 & 0 \cr
+    [C] & 0 & -1 & 0 & -1 \cr
+    [D] & 0 & 1 & -1 & 0\cr
+    [E] & 0 & 0 & 1 & 1\cr
+  },
+\end{equation*}
+da cui risulta evidente che $Im\,\partial_1$ ha dimensione 3, quindi $H_0(X) = Ker\,\partial_0 / Im\,\partial_1$ è un $k$-spazio di dimensione $2$. Si osservi che $X$ ha esattamente 2 componenti connesse.
+
+Analogamente $Ker\,\partial_1$ ha dimensione 1 e $C_2$ è lo spazio banale, quindi $H_1(X)$ ha dimensione 1, che rappresenta il fatto che c'è un loop nella spezzata $[C,D] + [D,E] + [E,C]$ (infatti $Ker\,\partial_1$ è generato proprio da questo vettore).
+
+\begin{figure}[h]
+  \includegraphics[width=.7\linewidth]{gfx/example_homology_loop.pdf}
+  \caption{Il complesso $X$ con l'aggiunta di un $2$-simplesso}
+  \label{fig:simplicialcomplexloop}
+\end{figure}
+
+Se aggiungiamo a $X$ il simplesso $\{C,D,E\}$ come in \cref{fig:simplicialcomplexloop} abbiamo che $C_2$ è generato da $[C,D,E]$ e $\partial_2([C,D,E]) = [D,E] - [C,E] + [C,D] = [C,D] + [D,E] + [E,C]$. Quindi chiudendo il loop con un simplesso abbiamo che
+$Im\,\partial_2 = Ker\,\partial_1$ e $H_1(X)$ è lo spazio banale.

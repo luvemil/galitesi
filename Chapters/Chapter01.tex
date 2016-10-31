@@ -293,3 +293,44 @@ Analogamente $Ker\,\partial_1$ ha dimensione 1 e $C_2$ è lo spazio banale, quin
 
 Se aggiungiamo a $X$ il simplesso $\{C,D,E\}$ come in \cref{fig:simplicialcomplexloop} abbiamo che $C_2$ è generato da $[C,D,E]$ e $\partial_2([C,D,E]) = [D,E] - [C,E] + [C,D] = [C,D] + [D,E] + [E,C]$. Quindi chiudendo il loop con un simplesso abbiamo che
 $Im\,\partial_2 = Ker\,\partial_1$ e $H_1(X)$ è lo spazio banale.
+
+\begin{rmk}
+  L'assegnazione di $H_*(X)$ a un complesso simpliciale astratto $X$ è in realtà un funtore, cioé per ogni morfismo di complessi simpliciali astratti $f:X\to Y$ esiste un omomorfismo di $k$-spazi vettoriali $f_*:H_*(X)\to H_*(Y)$ (e in realtà $f_*$ è il morfismo indotto da $f_*:C_*(X)\to C_*(Y)$) e $(g\circ f)_* = g_* \circ f_*$.
+\end{rmk}
+
+\section{Omologia Persistente}
+
+Nella sezione precedente è stata definita l'omologia simpliciale e si è visto con alcuni esempi come questa sia collegata a proprietà topologiche del complesso simpliciale in analisi. Quello che resta per poter usare l'omologia per studiare una nube di punti è un modo di costruire un simplesso simpliciale a partire dai dati, il che essenzialmente si riduce a studiare i dati ad una certa scala di grandezza. Tuttavia, non è necessariamente ovvio come fare e, come si è visto nell'introduzione, talvolta non esiste una scelta di scala che consenta di catturare tutte le proprietà (omologiche) dei nostri dati.
+
+Per questo motivo si introduce il concetto di persistenza, che è un modo di controllare diverse scale contemporaneamente e le relazioni tra queste.
+
+\begin{defn}
+  Un \emph{insieme persistente} è una famiglia di insiemi $\{X_r\}_{\R}$ indicizzata da $\R$ e tale che per ogni coppia di numeri reali $r<s$ esiste una funzione $f_{s,r}:X_r\to X_s$ e queste funzioni sono tali che se $r< s< t$ allora $f_{t,r} = f_{t,s}\circ f_{s,r}$. Più in generale un oggetto persistente in una categoria $\mathcal{C}$ è un funtore $(R,\leq)\to \mathcal{C}$, quindi si può parlare di \emph{spazi vettoriali persistenti},
+  \emph{spazi topologici persistenti}, \emph{complessi simpliciali persistenti}, ecc.
+\end{defn}
+
+A questo punto è possibile associare un complesso simpliciale astratto ai nostri dati nel seguente modo.
+
+\begin{defn}
+  Sia $X$ uno spazio metrico finito. Fissato un numero reale positivo $r$ il \emph{complesso di Vietoris-Rips} di $X$ è
+  un complesso simpliciale astratto $VR(X,r)$ così definito:
+  \begin{itemize}
+    \item l'insieme dei vertici di $VR(X,r)$ è $X$,
+    \item la collezione $\{x_0,\dots,x_n\}\subseteq X$ è un simplesso di $VR(X,r)$ se e solo se
+    \begin{equation*}
+      d(x_i,x_j) < r \mathrm{\text{ per tutti gli }}i,j\in\{0,\dots,n\}.
+    \end{equation*}
+  \end{itemize}
+\end{defn}
+
+\begin{rmk}
+  Se $r<s$ esiste un'ovvia iniezione $VR(X,r)\to VR(X,s)$, siccome gli insiemi dei vertici coincidono e ogni simplesso di $VR(X,r)$ è anche un simplesso di $VR(X,s)$, quindi la famiglia $\{VR(X,r)\}_{r\in\R}$ forma un complesso simpliciale persistente.
+\end{rmk}
+
+\begin{figure}[h]
+  \includegraphics[width=.7\linewidth]{gfx/exhagon.pdf}
+  \caption{Esempio di complesso di Vietoris-Rips}
+  \label{fig:exhagon}
+\end{figure}
+
+Ad esempio si consideri un esagono regolare come in \cref{fig:exhagon}. Se $R$ è la misura del lato dell'esagono, le tre figure rappresentano $VR(X,r)$ rispettivamente con $0< r\leq R$, $R< r < \dfrac{\sqrt{3}R}{2}$, e $r > \dfrac{\sqrt{3}R}{2}$. 

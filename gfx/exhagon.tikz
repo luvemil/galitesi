@@ -1,0 +1,53 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{ffffqq}{rgb}{1.,1.,0.}
+\definecolor{ffwwqq}{rgb}{1.,0.4,0.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(3.262293404404936,-0.3877572748191714) rectangle (10.689517461500987,2.3087508223430966);
+\fill[fill=black,fill opacity=0.35] (9.,0.) -- (10.,0.) -- (10.5,0.8660254037844387) -- (10.,1.7320508075688776) -- (9.,1.7320508075688779) -- (8.5,0.8660254037844395) -- cycle;
+\fill[color=ffwwqq,fill=ffwwqq,fill opacity=0.5] (10.,1.7320508075688776) -- (8.5,0.8660254037844395) -- (10.,0.) -- cycle;
+\fill[color=ffffqq,fill=ffffqq,fill opacity=0.45] (9.,1.7320508075688779) -- (9.,0.) -- (10.5,0.8660254037844387) -- cycle;
+\draw [line width=1.2pt] (6.5,0.)-- (7.5,0.);
+\draw [line width=1.2pt] (7.5,0.)-- (8.,0.8660254037844387);
+\draw [line width=1.2pt] (8.,0.8660254037844387)-- (7.5,1.7320508075688776);
+\draw [line width=1.2pt] (7.5,1.7320508075688776)-- (6.5,1.7320508075688779);
+\draw [line width=1.2pt] (6.5,1.7320508075688779)-- (6.,0.8660254037844395);
+\draw [line width=1.2pt] (6.,0.8660254037844395)-- (6.5,0.);
+\draw [line width=1.2pt] (9.,0.)-- (10.,0.);
+\draw [line width=1.2pt] (10.,0.)-- (10.5,0.8660254037844387);
+\draw [line width=1.2pt] (10.5,0.8660254037844387)-- (10.,1.7320508075688776);
+\draw [line width=1.2pt] (10.,1.7320508075688776)-- (9.,1.7320508075688779);
+\draw [line width=1.2pt] (9.,1.7320508075688779)-- (8.5,0.8660254037844395);
+\draw [line width=1.2pt] (8.5,0.8660254037844395)-- (9.,0.);
+\draw [line width=1.2pt] (9.,1.7320508075688779)-- (9.,0.);
+\draw [line width=1.2pt] (9.,1.7320508075688779)-- (10.5,0.8660254037844387);
+\draw [line width=1.2pt] (10.5,0.8660254037844387)-- (9.,0.);
+\draw [line width=1.2pt] (8.5,0.8660254037844395)-- (10.,0.);
+\draw [line width=1.2pt] (10.,0.)-- (10.,1.7320508075688776);
+\draw [line width=1.2pt] (10.,1.7320508075688776)-- (8.5,0.8660254037844395);
+\begin{scriptsize}
+\draw [fill=black] (4.,0.) circle (1.5pt);
+\draw [fill=black] (5.,0.) circle (1.5pt);
+\draw [fill=black] (5.5,0.8660254037844387) circle (1.5pt);
+\draw [fill=black] (5.,1.7320508075688776) circle (1.5pt);
+\draw [fill=black] (4.,1.7320508075688779) circle (1.5pt);
+\draw [fill=black] (3.5,0.8660254037844395) circle (1.5pt);
+\draw [fill=black] (6.5,0.) circle (1.5pt);
+\draw [fill=black] (7.5,0.) circle (1.5pt);
+\draw [fill=black] (8.,0.8660254037844387) circle (1.5pt);
+\draw [fill=black] (7.5,1.7320508075688776) circle (1.5pt);
+\draw [fill=black] (6.5,1.7320508075688779) circle (1.5pt);
+\draw [fill=black] (6.,0.8660254037844395) circle (1.5pt);
+\draw [fill=black] (9.,0.) circle (1.5pt);
+\draw [fill=black] (10.,0.) circle (1.5pt);
+\draw [fill=black] (10.5,0.8660254037844387) circle (1.5pt);
+\draw [fill=black] (10.,1.7320508075688776) circle (1.5pt);
+\draw [fill=black] (9.,1.7320508075688779) circle (1.5pt);
+\draw [fill=black] (8.5,0.8660254037844395) circle (1.5pt);
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

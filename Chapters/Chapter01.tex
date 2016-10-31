@@ -155,9 +155,11 @@ Un \emph{complesso simpliciale} (finito) $K$ è una famiglia finita di simplessi
 \begin{defn}
   Un \emph{complesso simpliciale astratto} $X$ è il dato della coppia $(V(X), \Sigma(X))$, dove $V(X)$ è un insieme finito, i cui elementi sono i \emph{vertici} di $X$, e $\Sigma(X)$ è una famiglia di sottinsiemi non vuoti di $V(X)$, i cui elementi sono detti \emph{simplessi} di $X$, tale che:
   \begin{enumerate}
-    \item se $v\in V(x)$ allora $\{v\}\in\Sigma(X)$, e
+    \item se $v\in V(X)$ allora $\{v\}\in\Sigma(X)$, e
     \item se $\sigma \in \Sigma(X)$ e $\emptyset\neq\tau\subseteq\sigma$, allora $\tau\in\Sigma(X)$.
   \end{enumerate}
+
+  Un simplesso $\sigma\in\Sigma(X)$ è detto $q$-simplesso se $|\#\sigma| = q+1$. Indichiamo con $X_q$ l'insieme dei $q$-simplessi di $X$.
 \end{defn}
 
 \begin{rmk}
@@ -333,4 +335,19 @@ A questo punto è possibile associare un complesso simpliciale astratto ai nostr
   \label{fig:exhagon}
 \end{figure}
 
-Ad esempio si consideri un esagono regolare come in \cref{fig:exhagon}. Se $R$ è la misura del lato dell'esagono, le tre figure rappresentano $VR(X,r)$ rispettivamente con $0< r\leq R$, $R< r < \dfrac{\sqrt{3}R}{2}$, e $r > \dfrac{\sqrt{3}R}{2}$. 
+Ad esempio si consideri un esagono regolare come in \cref{fig:exhagon}. Se $R$ è la misura del lato dell'esagono, le tre figure rappresentano $VR(X,r)$ rispettivamente con $0< r\leq R$, $R< r < \dfrac{\sqrt{3}R}{2}$, e $r > \dfrac{\sqrt{3}R}{2}$. I complessi di Vietoris-Rips sono elementari nelle prime due figure. Si osservi, invece, che nella terza vi sono 8 $2$-simplessi, sebbene intuitivamente sia sufficiente usarne 4 per vedere che lo spazio diventa banale a quella scala.
+
+\begin{sloppypar}
+  A questo punto applicando $H_*(-,k)$ a $\{VR(X,r)\}_{\R}$ otteniamo una famiglia di spazi vettoriali che insieme alle mappe ${H_*(f_{s,r},k):H_*(VR(X,r))\to H_*(VR(X,s))}$ formano uno spazio vettoriale persistente. Osserviamo inoltre che essendo partiti da uno spazio metrico finito $X$ ci saranno solo un numero finito di complessi di Vietoris-Rips al variare di $r$.
+\end{sloppypar}
+
+Gli spazi $\{H_*(VR(X,r),k)\}_{r\in\R}$ racchiudono l'informazione topologica dello spazio metrico $X$, tuttavia data questa definizione astratta potrebbero sembrare di difficile utilizzo: assumendo di poter calcolare tutti gli $H_q(VR(X,r),k)$ per tutti gli $r$ e per piccoli valori di $q$, la domanda successiva diventa cosa si può dire delle interazioni fra i vari complessi su scale diverse?
+
+In linea di principio dobbiamo considerare per ogni $f_{s,r}:VR(X,r)\to VR(X,s)$ non banale l'associato morfismo di spazi vettoriali $H_q(f_{s,r}):H_q(VR(X,r))\to H_q(VR(X,s))$ e tenere traccia delle dimensioni degli spazi $H_q(VR(X,r))$,
+$H_q(VR(X,s))$, e $Im\,H_q(f_{s,r})$.
+
+Al fine di poter meglio comprendere come sono fatti i gruppi di omologia persistenti, studiamo meglio gli spazi vettoriali persistenti.
+
+\begin{defn}
+  Sia $I\subseteq \R$. Diremo che $I$ è un intervallo di $\R$ se dati comunque $r,s\in I$ tali che $r<s$ e $t$ tale che $r<t<s$, allora anche $t\in I$. Definiamo \emph{moduli intervallo} gli spazi vettoriali persistenti $k_I$, dove $I$ è un intervallo di $\R$, tali che $k_I(r) = k$ se $r\in I$ e $0$ altrimenti.
+\end{defn}

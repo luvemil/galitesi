@@ -375,10 +375,29 @@ Al fine di poter meglio comprendere come sono fatti i gruppi di omologia persist
 Poiché i moduli intervallo sono associati a intervalli di $\R$ li si può rappresentare come barre lunghe quanto l'intervallo ad essi associati (\cref{fig:barcodes:single}), e similmente una somma diretta finita di moduli intervallo
 $k_{I_1}\oplus k_{I_2}\oplus\cdots \oplus k_{I_n}$ può essere rappresentata con quelli che sono detti codici a barre (\cref{fig:barcodes:multiple}). Il seguente teorema ci dice che in realtà tutti gli spazi vettoriali persistenti si posso rappresentare in questo modo.
 
-\begin{thm}[Decomposizione degli spazi vettoriali persistenti \cite{Crawley-Boevey2012}]
+\begin{theorem}[Decomposizione degli spazi vettoriali persistenti \cite{Crawley-Boevey2012}]\label{thm:persistentdecomposition}
   Sia $(V,f)$ uno spazio vettoriale persistente tale che $V_r$ ha dimensione finita per ogni $r\in\R$, allora esiste un
   multi-insieme $\mathcal{D}$ di intervalli, cioé una famiglia di intervalli con ripetizioni, tale che
   \begin{equation*}
     V\cong \bigoplus_{I\in\mathcal{D}} k_I.
   \end{equation*}
-\end{thm}
+\end{theorem}
+
+\subsection{Codice a barre persistente di una nube di punti}
+
+Con la teoria sviluppata finora è possibile, a partire da una collezione di dati sotto forma di nube di punti, costruire un codice a barre associato alla sua omologia persistente. Sia $X$ una nube di punti, cioé un sottinsieme finito di $\R^n$, possiamo costruire una torre di inclusioni di complessi simpliciali astratti
+\begin{equation*}
+  VR(X,r_0)\into VR(X,r_1)\into VR(X,r_2)\into \dots
+\end{equation*}
+e applicarvi $H_q(-,k)$ ottenendo
+\begin{equation*}
+  H_q(VR(X,r_0))\to H_q(VR(X,r_1))\to H_q(VR(X,r_2))\to \dots
+\end{equation*}
+
+Il codice a barre persistente di $X$ allora è il codice a barre associato a $H_q(VR(X,-))$ mediante il \Cref{thm:persistentdecomposition}. Le barre lunghe di questo codice a barre sono considerate delle proprietà topologiche robuste di $X$ perché restano su più scale, mentre barre corte sono considerate rumore. Ad esempio nella \cref{fig:circle} mostrata nell'introduzione il codice a barre persistente di $H_0$ presenta una lunga barra, il che significa che l'insieme da un certo punto in poi è connesso, mentre il codice a barre di $H_1$ contiene una barra che compare intorno alla distanza tipica fra due punti vicini e scompare intorno a $\sqrt{3}$ volte il raggio, a rappresentare il fatto che l'insieme ha essenzialmente un buco. Il fatto che le barre corrispondenti ai loop in $H_1$ scompaiano a circa $\sqrt{3}$ volte il raggio lo si intuisce dalla \cref{fig:exhagon} disegnando il codice a barre di $H_1$ dell'esagono come si vede in \cref{fig:exhagonpersistence}.
+
+\begin{figure}[ht]
+  \includegraphics[width=.7\linewidth]{gfx/exhagon_barcode.pdf}
+  \caption{Codice a barre persistente di $H_1$ per un esagono regolare di lato $R$}
+  \label{fig:exhagonpersistence}
+\end{figure}

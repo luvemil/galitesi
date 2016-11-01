@@ -1,0 +1,11 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-1.0744491910890839,0.0746686678937296) rectangle (8.054787476003638,5.6270404768960045);
+\draw [line width=1.2pt] (0.7898515714505054,1.5999928096894882)-- (6.155148858586145,1.5999928096894882);
+\end{tikzpicture}
+\end{document}

@@ -320,7 +320,7 @@ A questo punto è possibile associare un complesso simpliciale astratto ai nostr
     \item l'insieme dei vertici di $VR(X,r)$ è $X$,
     \item la collezione $\{x_0,\dots,x_n\}\subseteq X$ è un simplesso di $VR(X,r)$ se e solo se
     \begin{equation*}
-      d(x_i,x_j) < r \mathrm{\text{ per tutti gli }}i,j\in\{0,\dots,n\}.
+      d(x_i,x_j) \leq r \mathrm{\text{ per tutti gli }}i,j\in\{0,\dots,n\}.
     \end{equation*}
   \end{itemize}
 \end{defn}
@@ -335,20 +335,50 @@ A questo punto è possibile associare un complesso simpliciale astratto ai nostr
   \label{fig:exhagon}
 \end{figure}
 
-Ad esempio si consideri un esagono regolare come in \cref{fig:exhagon}. Se $R$ è la misura del lato dell'esagono, le tre figure rappresentano $VR(X,r)$ rispettivamente con $0< r\leq R$, $R< r < \sqrt{3}R$, e $r > \sqrt{3}R$. I complessi di Vietoris-Rips sono elementari nelle prime due figure. Si osservi, invece, che nella terza vi sono 8 $2$-simplessi, sebbene intuitivamente sia sufficiente usarne 4 per vedere che lo spazio diventa banale a quella scala.
+Ad esempio si consideri un esagono regolare come in \cref{fig:exhagon}. Se $R$ è la misura del lato dell'esagono, le tre figure rappresentano $VR(X,r)$ rispettivamente con $0\leq r < R$, $R\leq r < \sqrt{3}R$, e $r \geq \sqrt{3}R$. I complessi di Vietoris-Rips sono elementari nelle prime due figure. Si osservi, invece, che nella terza vi sono 8 $2$-simplessi, sebbene intuitivamente sia sufficiente usarne 4 per vedere che lo spazio diventa banale a quella scala.
 
 \begin{sloppypar}
-  A questo punto applicando $H_*(-,k)$ a $\{VR(X,r)\}_{\R}$ otteniamo una famiglia di spazi vettoriali che insieme alle mappe ${H_*(f_{s,r},k):H_*(VR(X,r))\to H_*(VR(X,s))}$ formano uno spazio vettoriale persistente. Osserviamo inoltre che essendo partiti da uno spazio metrico finito $X$ ci saranno solo un numero finito di complessi di Vietoris-Rips al variare di $r$.
+  A questo punto applicando $H_*(-,k)$ a $\{VR(X,r)\}_{\R}$ otteniamo una famiglia di spazi vettoriali $\{H_*(VR(X,r),k)\}$ che insieme alle mappe ${H_*(f_{s,r},k):H_*(VR(X,r))\to H_*(VR(X,s))}$ formano uno spazio vettoriale persistente. Osserviamo inoltre che essendo partiti da uno spazio metrico finito $X$ ci saranno solo un numero finito di complessi di Vietoris-Rips al variare di $r$.
 \end{sloppypar}
 
-Gli spazi $\{H_*(VR(X,r),k)\}_{r\in\R}$ racchiudono l'informazione topologica dello spazio metrico $X$, tuttavia data questa definizione astratta potrebbero sembrare di difficile utilizzo: assumendo di poter calcolare tutti gli $H_q(VR(X,r),k)$ per tutti gli $r$ e per piccoli valori di $q$, la domanda successiva diventa cosa si può dire delle interazioni fra i vari complessi su scale diverse?
+Gli spazi $\{H_*(VR(X,r),k)\}_{r\in\R}$ racchiudono l'informazione topologica dello spazio metrico $X$, tuttavia questa definizione astratta potrebbero sembrare di difficile utilizzo: assumendo di poter calcolare tutti gli $H_q(VR(X,r),k)$ per tutti gli $r$ e per piccoli valori di $q$, la domanda successiva diventa cosa si può dire delle interazioni fra i vari complessi su scale diverse?
 
 \begin{sloppypar}
   In linea di principio dobbiamo considerare per ogni ${f_{s,r}:VR(X,r)\to VR(X,s)}$ non banale l'associato morfismo di spazi vettoriali ${H_q(f_{s,r}):H_q(VR(X,r))\to H_q(VR(X,s))}$ e tenere traccia delle dimensioni degli spazi $H_q(VR(X,r))$, $H_q(VR(X,s))$, e $Im\,H_q(f_{s,r})$.
 \end{sloppypar}
 
-Al fine di poter meglio comprendere come sono fatti i gruppi di omologia persistenti, studiamo meglio gli spazi vettoriali persistenti.
+Al fine di poter meglio comprendere come sono fatti i gruppi di omologia persistenti, studiamo meglio gli spazi vettoriali persistenti. D'ora in poi per semplicità diremo che $V$ è uno spazio vettoriale persistente invece che indicare esplicitamente tutta la famiglia $\{V_r\}$. Qualora fosse necessario esplicitare i morfismi $f_{s,r}:V_r\to V_s$ li indicheremo con la notazione $(V,f)$.
 
 \begin{defn}
   Sia $I\subseteq \R$. Diremo che $I$ è un intervallo di $\R$ se dati comunque $r,s\in I$ tali che $r<s$ e $t$ tale che $r<t<s$, allora anche $t\in I$. Definiamo \emph{moduli intervallo} gli spazi vettoriali persistenti $k_I$, dove $I$ è un intervallo di $\R$, tali che $k_I(r) = k$ se $r\in I$ e $0$ altrimenti.
 \end{defn}
+
+\begin{defn}
+  Si definisce \emph{somma diretta} di due spazi vettoriali persistenti $(V,f^V)$ e $(W,f^W)$ lo spazio vettoriale persistente $U$ definito come $U_r = V_r\oplus W_r$ per ciascun $r$ e $f^U_{s,r} = f^V_{s,r}\oplus f^W_{s,r}$, e lo si indica come $(V\oplus W,f^V\oplus f^W)$.
+\end{defn}
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{subfigure}[b]{.4\textwidth}
+      \includegraphics[width=\textwidth]{gfx/barcodes_single.pdf}
+      \caption{$k_I$}\label{fig:barcodes:single}
+    \end{subfigure}
+    \begin{subfigure}[b]{.4\textwidth}
+      \includegraphics[width=\textwidth]{gfx/barcodes_multiple.pdf}
+      \caption{$\bigoplus_{I\in\mathcal{D}} k_I$}\label{fig:barcodes:multiple}
+    \end{subfigure}
+    \caption{Esempi di codici a barre}  \label{fig:barcodes}
+  \end{center}
+\end{figure}
+
+
+Poiché i moduli intervallo sono associati a intervalli di $\R$ li si può rappresentare come barre lunghe quanto l'intervallo ad essi associati (\cref{fig:barcodes:single}), e similmente una somma diretta finita di moduli intervallo
+$k_{I_1}\oplus k_{I_2}\oplus\cdots \oplus k_{I_n}$ può essere rappresentata con quelli che sono detti codici a barre (\cref{fig:barcodes:multiple}). Il seguente teorema ci dice che in realtà tutti gli spazi vettoriali persistenti si posso rappresentare in questo modo.
+
+\begin{thm}[Decomposizione degli spazi vettoriali persistenti \cite{Crawley-Boevey2012}]
+  Sia $(V,f)$ uno spazio vettoriale persistente tale che $V_r$ ha dimensione finita per ogni $r\in\R$, allora esiste un
+  multi-insieme $\mathcal{D}$ di intervalli, cioé una famiglia di intervalli con ripetizioni, tale che
+  \begin{equation*}
+    V\cong \bigoplus_{I\in\mathcal{D}} k_I.
+  \end{equation*}
+\end{thm}

@@ -1,0 +1,21 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.19191198832409884,-0.6488146096953721) rectangle (5.318509935296181,1.9201805837317376);
+\draw [line width=1pt] (1.,0.6000024121659591)-- (4.5034958727267815,0.6000024121659591);
+\draw [line width=1.2pt] (1.9966812892949057,1.)-- (2.7210775953389605,1.);
+\draw (1.,0.6000024121659591)-- (2.,0.6000024121659591);
+\draw (1.,0.6000024121659591)-- (2.732050807568877,0.6000024121659591);
+\begin{scriptsize}
+\draw [color=black] (1.,0.6000024121659591)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw [color=black] (2.,0.6000024121659591)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=black] (1.9919174897054073,0.361948278815241) node {R};
+\draw [color=black] (2.732050807568877,0.6000024121659591)-- ++(-1.5pt,0 pt) -- ++(3.0pt,0 pt) ++(-1.5pt,-1.5pt) -- ++(0 pt,3.0pt);
+\draw[color=black] (2.78938828145662,0.361948278815241) node {$\sqrt{3}$R};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}

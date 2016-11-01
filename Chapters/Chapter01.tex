@@ -396,8 +396,25 @@ e applicarvi $H_q(-,k)$ ottenendo
 
 Il codice a barre persistente di $X$ allora è il codice a barre associato a $H_q(VR(X,-))$ mediante il \Cref{thm:persistentdecomposition}. Le barre lunghe di questo codice a barre sono considerate delle proprietà topologiche robuste di $X$ perché restano su più scale, mentre barre corte sono considerate rumore. Ad esempio nella \cref{fig:circle} mostrata nell'introduzione il codice a barre persistente di $H_0$ presenta una lunga barra, il che significa che l'insieme da un certo punto in poi è connesso, mentre il codice a barre di $H_1$ contiene una barra che compare intorno alla distanza tipica fra due punti vicini e scompare intorno a $\sqrt{3}$ volte il raggio, a rappresentare il fatto che l'insieme ha essenzialmente un buco. Il fatto che le barre corrispondenti ai loop in $H_1$ scompaiano a circa $\sqrt{3}$ volte il raggio lo si intuisce dalla \cref{fig:exhagon} disegnando il codice a barre di $H_1$ dell'esagono come si vede in \cref{fig:exhagonpersistence}.
 
+Tuttavia, è possibile che un codice a barre persistente non mostri questa dualità fra barre lunghe e corte, ma presenti anche barre di lunghezza diversa.
+
 \begin{figure}[ht]
   \includegraphics[width=.7\linewidth]{gfx/exhagon_barcode.pdf}
   \caption{Codice a barre persistente di $H_1$ per un esagono regolare di lato $R$}
   \label{fig:exhagonpersistence}
 \end{figure}
+
+Per chiarezza esplicitiamo il procedimento seguendo \cite{Curry}.
+\begin{defn}[Persistenza di una nube di punti]
+  Il processo di persistenza di una nube di punti è l'insieme delle seguenti operazioni.
+  \begin{enumerate}
+    \item Sia $X$ una nube di punti, cioé un sottinsieme finito di $\R^n$.
+    \item A partire da $X$ si costruisce una famiglia crescente di complessi simpliciali (astratti) $\{X_r\}$ (ad esempio con il complesso di Vietoris-Rips) la cui omologia $H_q$ produce per ogni $q\geq 0$ uno spazio vettoriale persistente:
+    \begin{equation*}
+      H_q(X_{r_0}) \to H_q(X_{r_1})\to H_q(X_{r_2})\to \cdots
+    \end{equation*}
+    \item Il \Cref{thm:persistentdecomposition} fornisce un multi insieme di intervalli, che può essere visualizzato come codice a barre persistente.
+  \end{enumerate}
+\end{defn}
+
+Utilizzando i codici a barre persistenti si riescono a individuare buchi $n$-dimensionali e a tracciarne l'evoluzione su più scale, o più in generale si possono distinguere due nubi di punti sulla base di proprietà omologiche dei complessi persistenti associati. Nel \cref{cap:esempi} mostreremo come è possibile utilizzare l'omologia persistente per fare questo tipo di analisi.

@@ -300,7 +300,7 @@ $Im\,\partial_2 = Ker\,\partial_1$ e $H_1(X)$ è lo spazio banale.
   L'assegnazione di $H_*(X)$ a un complesso simpliciale astratto $X$ è in realtà un funtore, cioé per ogni morfismo di complessi simpliciali astratti $f:X\to Y$ esiste un omomorfismo di $k$-spazi vettoriali $f_*:H_*(X)\to H_*(Y)$ (e in realtà $f_*$ è il morfismo indotto da $f_*:C_*(X)\to C_*(Y)$) e $(g\circ f)_* = g_* \circ f_*$.
 \end{rmk}
 
-\section{Omologia Persistente}
+\section{Omologia Persistente}\label{sec:persistenthomology}
 
 Nella sezione precedente è stata definita l'omologia simpliciale e si è visto con alcuni esempi come questa sia collegata a proprietà topologiche del complesso simpliciale in analisi. Quello che resta per poter usare l'omologia per studiare una nube di punti è un modo di costruire un simplesso simpliciale a partire dai dati, il che essenzialmente si riduce a studiare i dati ad una certa scala di grandezza. Tuttavia, non è necessariamente ovvio come fare e, come si è visto nell'introduzione, talvolta non esiste una scelta di scala che consenta di catturare tutte le proprietà (omologiche) dei nostri dati.
 
@@ -418,3 +418,7 @@ Per chiarezza esplicitiamo il procedimento seguendo \cite{Curry}.
 \end{defn}
 
 Utilizzando i codici a barre persistenti si riescono a individuare buchi $n$-dimensionali e a tracciarne l'evoluzione su più scale, o più in generale si possono distinguere due nubi di punti sulla base di proprietà omologiche dei complessi persistenti associati. Nel \cref{cap:esempi} mostreremo come è possibile utilizzare l'omologia persistente per fare questo tipo di analisi.
+
+\section{Persistenza funzionale}
+
+Nella \cref{sec:persistenthomology} si è visto come associare ad una nube di punti

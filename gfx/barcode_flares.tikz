@@ -1,0 +1,15 @@
+\documentclass[crop,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(0.6191284839051056,0.23979570111312) rectangle (4.902685879597334,1.9030919239084985);
+\draw [line width=.5pt] (1.0007752199574727,1.25)-- (2.3963491055220953,1.25);
+\draw [line width=.5pt] (1.0005209297958189,0.7500015076037245)-- (4.5040168025226,0.7500015076037245);
+\draw [line width=.5pt] (1.,1.)-- (2.4988810644615373,1.);
+% \draw (1.0005209297958189,0.7500015076037245)-- (2.000520929795819,0.7500015076037245);
+% \draw (1.0005209297958189,0.7500015076037245)-- (2.732571737364696,0.7500015076037245);
+\end{tikzpicture}
+\end{document}

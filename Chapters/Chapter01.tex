@@ -429,4 +429,48 @@ Nella \cref{sec:persistenthomology} si è visto come calcolare l'omologia persis
   \label{fig:threeflares}
 \end{figure}
 
-\`E possibile costruire un complesso simpliciale persistente la cui omologia evidenzi questa ramificazione? La risposta è fortunatamente positiva, e il processo è una semplice variazione sull'idea
+\`E possibile costruire un complesso simpliciale persistente la cui omologia evidenzi questa ramificazione? La risposta è fortunatamente positiva. Di seguito mostreremo la procedura più generale detta persistenza funtoriale, e vedremo come il caso in esame segue come suo caso particolare.
+
+Sia $f:X\to \R$ una funzione reale definita su uno spazio metrico finito $X$. Allora per ogni $r\in \R$ possiamo considerare le preimmagini $X_r=f^{\shortleftarrow}([-\infty,r])$. Fissato un parametro $0<\rho\in \R$ si possono costruire i complessi di Vietoris-Rips
+\begin{equation*}
+  VR(X_{r_0},\rho)\into VR(X_{r_1},\rho)\into VR(X_{r_2},\rho)\into \cdots
+\end{equation*}
+e, applicando $H_q(-)$ a questi complessi, si ottiene lo spazio vettoriale persistente
+\begin{equation*}
+  H_q(VR(X_{r_0}))\to H_q(VR(X_{r_1},\rho))\to H_q(VR(X_{r_2},\rho))\to \cdots
+\end{equation*}
+
+Infine, anche in questo caso il \cref{thm:persistentdecomposition} ci consente di costruire un codice a barre persistente.
+
+Per rendere la persistenza funzionale sensibile a forme come quella in \cref{fig:threeflares} si può usare una funzione che misuri l'eccentricità di un punto $x\in X$ come
+\begin{equation*}
+  e_p(x) = \big(\sum_{y\in X} d(x,y)^p\big)^{\frac{1}{p}}
+\end{equation*}
+o, in caso $p=\infty$, $e_\infty(x) = \max_{y\in X}d(x,y)$. Poiché queste funzioni assumono valori alti per punti distanti dal "centro", prendiamo la rinormalizzazione
+\begin{equation*}
+  \hat{e}_p(x) = \frac{e_p^{max} - e_p(x)}{e_p^{max} - e_p^{min}}
+\end{equation*}
+che assume valori in $[0,1]$ e raggiunge entrambi gli estremi. Inoltre i punti distanti dal centro adesso hanno valori bassi, come si può vedere in \cref{fig:threeflarescomparison}.
+
+\begin{figure}[ht]
+  \begin{center}
+    \begin{subfigure}[b]{.3\textwidth}
+      \includegraphics[width=\textwidth]{gfx/functional_small.pdf}
+    \end{subfigure}
+    \begin{subfigure}[b]{.3\textwidth}
+      \includegraphics[width=\textwidth]{gfx/functional_medium.pdf}
+    \end{subfigure}
+    \begin{subfigure}[b]{.3\textwidth}
+      \includegraphics[width=\textwidth]{gfx/functional_all.pdf}
+    \end{subfigure}
+    \caption{$X_r$ al variare di $r\in [0,1]$}  \label{fig:threeflarescomparison}
+  \end{center}
+\end{figure}
+
+Il codice a barre persistente corrispondente è mostrato in \cref{fig:threeflarepersistence}.
+
+\begin{figure}[ht]
+  \includegraphics[width=.7\linewidth]{gfx/barcode_flares.pdf}
+  \caption{Persistenza funzionale}
+  \label{fig:threeflarepersistence}
+\end{figure}

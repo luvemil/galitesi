@@ -483,7 +483,8 @@ Tuttavia, sarebbe altrettanto valido fissare un parametro $r$ e costruire la fil
 
 Si osservi che se $r<s$ e $\rho<\sigma$, allora
 $VR(f^\shortleftarrow(-\infty,r],\rho)\into VR(f^\shortleftarrow(-\infty,s],\sigma)$ induce
-una mappa $H_q(VR(f^\shortleftarrow(-\infty,r],\rho))\to H_q(VR(f^\shortleftarrow(-\infty,s],\sigma))$, quindi abbiamo a che fare essenzialmente con una filtrazione a più parametri, detta \emph{multifiltrazione} (vd. \cref{def:multifiltration}). Lo studio dell'omologia di una multifiltrazione è detto \emph{persistenza multidimensionale} di cui mostreremo brevemente i principali risultati seguendo \cite{Carlsson2009a}. Anticipiamo già che non è possibile trovare risultati come il \Cref{thm:persistentdecomposition} che garantiscono l'esistenza di invarianti completi.
+una mappa $H_q(VR(f^\shortleftarrow(-\infty,r],\rho))\to H_q(VR(f^\shortleftarrow(-\infty,s],\sigma))$, quindi abbiamo a che fare essenzialmente con una filtrazione a più parametri, detta \emph{multifiltrazione} (vd. \cref{def:multifiltration}). Lo studio dell'omologia di una multifiltrazione è detto \emph{persistenza multidimensionale} di cui mostreremo brevemente i principali risultati seguendo \cite{Carlsson2009a}.
+Anticipiamo già che non è possibile trovare risultati come il \Cref{thm:persistentdecomposition} che garantiscono l'esistenza di invarianti completi.
 
 L'oggetto di studio della persistenza multidimensionale sono i moduli persistenti indicizzati da un insieme con un ordine quasi-parziale.\footnote{Si confronti con \cref{def:persistentset}, dove l'insieme degli indici è totalmente ordinato, $\R$}
 
@@ -516,4 +517,45 @@ I complessi di Vietoris-Rips $VR(f^\shortleftarrow(-\infty,r_i],\rho_j)$ dalla \
   Un \emph{modulo persistente} $M$ è una famiglia di $k$-moduli $\{M_v\}_{v\in\N^n}$ insieme con morfismi di moduli $f_{v,u}:M_u\to M_v$ per tutti gli $u\lesssim v$ e tali che $f_{w,v}\circ f_{v,u}=f_{w,u}$ ogniqualvolta $u\lesssim v\lesssim w$.
 \end{definition}
 
-L'omologia di una multifiltrazione di complessi simpliciali è un modulo persistente.
+L'omologia di una multifiltrazione di complessi simpliciali è un modulo persistente. Ad ogni modulo persistente può essere associata una struttura di modulo $n$-graduato nel seguente modo:
+
+\begin{definition}\label{def:correspondence}
+  Dato un modulo persistente $M$, definiamo il seguente modulo $n$-graduato su $A_n=k[x_1,\dots,x_n]$
+  \begin{equation*}
+    \alpha(M) = \bigoplus_v M_v,
+  \end{equation*}
+  dove la struttura di $k$-modulo è data dalla somma diretta e $x^{v-u}:M_u \to M_v$ è $f_{u,v}$ ogniqualvolta $u\lesssim v$.
+\end{definition}
+
+Il \cite[Teorema~1]{Carlsson2009a}, che riportiamo di seguito, ci dice che questa assegnazione è un'equivalenza di categorie.
+
+\begin{theorem}
+  La corrispondenza $\alpha$ nella \cref{def:correspondence} è un'equivalenza di categorie fra la categoria dei moduli persistenti finiti su $k$ e la categoria dei moduli $n$-graduati finitamente generati su $A_n = k[x_1,\dots,x_n]$.
+\end{theorem}
+
+Quindi il problema della classificazione dei moduli persistenti si riconduce alla classificazione dei moduli $n$-graduati finitamente generati. Tuttavia i moduli $n$-graduati con $n>1$ sono sostanzialmente differenti dal caso $n=1$ della persistenza omologica, in particolare Carlsson e Zomorodian dimostrano sempre in \cite{Carlsson2009a} che non esiste un invariante completo, discreto e indipendente da $k$ che classifichi i moduli $n$-graduati.
+
+Quello che si può trovare è un invariante parziale che sia discreto e indipendente da $k$, detto invariante di rango che definiamo di seguito.
+
+\begin{definition}
+  Sia $\dot{\N}=\N\cup\{\infty\}$. Sia $\D^n \subset \N^n\prod \dot{\N}^n$ la sovradiagonale, cioé $\D^n = \{(u,v)| u\in \N^n, v\in \dot{\N}^n,u\lesssim v\}$. Per $(u,v), (u',v')\in\D^n$ definiamo $(u,v)\preceq (u',v')$ se $u\lesssim u'$ e $v\lesssim v'$.
+\end{definition}
+
+\begin{definition}[Invariante di rango $\rho_M$]
+  Se $M$ è un $A_n$-modulo $n$-graduato finitamente generato, definiamo $\rho_M:\D^n\to \N$ la mappa $\rho_M(u,v)=rank(x^{v-u}:M_u\to M_v)$.
+\end{definition}
+
+\begin{rmk}
+  $\rho_M$ rispetta l'ordine dato da $\preceq$, cioé se $(u,v)\preceq (u',v')$, allora $\rho_M(u,v)\leq \rho_M(u',v')$.
+\end{rmk}
+
+Nel caso di una multifiltrazione di complessi simpliciali possiamo dare una definizione dell'invariante di rango direttamente in termini dei complessi.
+
+\begin{definition}
+  Se $X=\{X_v\}_{v\in\N^n}$ è una multifiltrazione di complessi simpliciali, l'invariante di rango di $H_i(X_v,k)$ si può scrivere come
+  \begin{equation*}
+    \rho_{X,i}(u,v) = rank(H_i(X_u,k)\to H_i(X_v,k))
+  \end{equation*}
+\end{definition}
+
+L'invariante di rango si restringe a un invariante completo nel caso di moduli $1$-graduati, tuttavia anche nel caso di moduli $n$-graduati può essere utilizzato per trovare proprietà topologiche persistenti cercando punti $(u,v)\in \D^n$ che sia lontani dalla diagonale. La lontananza dalla diagonale significa che la proprietà è persistente, ed è l'equivalente di cercare barre lunghe nell'omologia persistente.

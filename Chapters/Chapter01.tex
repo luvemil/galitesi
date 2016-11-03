@@ -142,17 +142,17 @@ Gli spazi $\widehat{X}_\varepsilon$ usati nell'introduzione, sebbene comodi per 
 \end{sloppypar}
 
 Con questi ingredienti possiamo dare la seguente
-\begin{defn}
+\begin{definition}
 Un \emph{complesso simpliciale} (finito) $K$ è una famiglia finita di simplessi in uno spazio euclideo tali che:
 \begin{enumerate}
   \item Se $\sigma\in K$ e $\tau$ è una faccia di $\sigma$, allora $\tau \in K$.
   \item Se $\sigma,\tau\in K$, allora il simplesso $\sigma\cap\tau$ è una faccia sia di $\sigma$ sia di $\tau$.
 \end{enumerate}
-\end{defn}
+\end{definition}
 
 \`E chiaro che un complesso simpliciale è determinato essenzialmente da proprietà combinatoriche dell'insieme dei suoi vertici, che motiva la seguente costruzione astratta.
 
-\begin{defn}
+\begin{definition}
   Un \emph{complesso simpliciale astratto} $X$ è il dato della coppia $(V(X), \Sigma(X))$, dove $V(X)$ è un insieme finito, i cui elementi sono i \emph{vertici} di $X$, e $\Sigma(X)$ è una famiglia di sottinsiemi non vuoti di $V(X)$, i cui elementi sono detti \emph{simplessi} di $X$, tale che:
   \begin{enumerate}
     \item se $v\in V(X)$ allora $\{v\}\in\Sigma(X)$, e
@@ -160,7 +160,7 @@ Un \emph{complesso simpliciale} (finito) $K$ è una famiglia finita di simplessi
   \end{enumerate}
 
   Un simplesso $\sigma\in\Sigma(X)$ è detto $q$-simplesso se $|\#\sigma| = q+1$. Indichiamo con $X_q$ l'insieme dei $q$-simplessi di $X$.
-\end{defn}
+\end{definition}
 
 \begin{rmk}
   Ogni complesso simpliciale $K$ determina un complesso simpliciale astratto $\widehat{K}$ tale che $V(\widehat{K})$ è l'insieme dei vertici dei simplessi di $K$ e un sottinsieme di $V(\widehat{K})$ è in $\Sigma(\widehat{K})$ se e solo se è l'insieme dei vertici di un simplesso di $K$.
@@ -176,7 +176,7 @@ Ad ogni complesso simpliciale astratto $X$ si può associare un complesso simpli
 
 Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratto.
 
-\begin{defn}
+\begin{definition}
   Sia $k$ un gruppo o un campo o un anello e
   sia $X=(V(X),\Sigma(X))$ un complesso simpliciale astratto, insieme con un ordine totale sull'insieme $V(X)$. Il gruppo dei \emph{$q$-cicli} di $X$ su $k$ è il $k$-modulo $C_q(X,k)$ generato dagli elementi
   \begin{itemize}
@@ -189,7 +189,7 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
   \end{enumerate}
 
   Scriveremo $C_*(X,k)$ per indicare tutti i gruppi dei cicli in tutti i gradi, eventualmente sottintendendo il campo $k$.
-\end{defn}
+\end{definition}
 
 \begin{rmk}
   Nella definizione precedente si è tenuta traccia dell'ordine dei vertici dei complessi simpliciali perché esso è importante ai fini dell'omologia, dunque d'ora in poi consideriamo sempre i complessi simpliciali ordinati.
@@ -209,13 +209,13 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
   Il motivo per cui il gruppo dei $q$-cicli è stato introdotto mediante generatori e relazioni è che in questo modo è più facile sollevare mappe di complessi simpliciali astratti a omomorfismi fra i gruppi dei cicli. Se avessimo semplicemente definito il gruppo dei $q$-cicli come il $k$-modulo generato da $X_q$ sarebbe stato necessario modificare la definizione di $f_*$ in modo che i cicli mappassero correttamente, perdendo notevolmente in eleganza.
 \end{rmk}
 
-\begin{defn}
+\begin{definition}
   Sia $X$ un complesso simpliciale astratto, allora esistono morfismi $\partial^X_q:C_q(X) \to C_{q-1}(X)$ per ogni $q\in\N_0$ definiti come:
   \begin{equation*}
     \partial_q([v_0,\dots,v_q])=\sum_{i=0}^q (-1)^i[v_0,\dots,\widehat{v}_i,\dots,v_q]
   \end{equation*}
   dove la notazione $\widehat{v}_i$ significa che l'$i$-mo elemento non è presente. Scriveremo $\partial$ invece che $\partial^X$ quando non è necessario specificare il complesso simpliciale sottostante.
-\end{defn}
+\end{definition}
 
 \begin{lemma}
   Nelle notazioni precedenti, $\partial_{q-1}\circ \partial_q=0$.
@@ -243,12 +243,12 @@ Ora definiremo i gruppi di omologia associati a un complesso simpliciale astratt
   a cui per completezza aggiungeremo il morfismo $\partial_0:C_0\to 0$.
 \end{rmk}
 
-\begin{defn}
+\begin{definition}
   Dato un complesso impliciale astratto $X$, per ogni $q\in\N_0$ vale $Im\,\partial_q \subseteq Ker\,\partial_{q-1}$. Definiamo il $q$-mo gruppo di omologia di $X$ come il quoziente
   \begin{equation*}
     H_q(X) = \frac{Ker\,\partial_q}{Im\,\partial_{q+1}}.
   \end{equation*}
-\end{defn}
+\end{definition}
 
 Il seguente esempio serve a mostrare intuitivamente come l'omologia è collegata alle proprietà geometriche di un complesso simpliciale. Consideriamo il complesso simpliciale astratto $X=(V(X),\Sigma(X))$ con:
 \begin{align*}
@@ -306,14 +306,14 @@ Nella sezione precedente è stata definita l'omologia simpliciale e si è visto 
 
 Per questo motivo si introduce il concetto di persistenza, che è un modo di controllare diverse scale contemporaneamente e le relazioni tra queste.
 
-\begin{defn}
+\begin{definition}\label{def:persistentset}
   Un \emph{insieme persistente} è una famiglia di insiemi $\{X_r\}_{\R}$ indicizzata da $\R$ e tale che per ogni coppia di numeri reali $r<s$ esiste una funzione $f_{s,r}:X_r\to X_s$ e queste funzioni sono tali che se $r< s< t$ allora $f_{t,r} = f_{t,s}\circ f_{s,r}$. Più in generale un oggetto persistente in una categoria $\mathcal{C}$ è un funtore $(R,\leq)\to \mathcal{C}$, quindi si può parlare di \emph{spazi vettoriali persistenti},
   \emph{spazi topologici persistenti}, \emph{complessi simpliciali persistenti}, ecc.
-\end{defn}
+\end{definition}
 
 A questo punto è possibile associare un complesso simpliciale astratto ai nostri dati nel seguente modo.
 
-\begin{defn}
+\begin{definition}
   Sia $X$ uno spazio metrico finito. Fissato un numero reale positivo $r$ il \emph{complesso di Vietoris-Rips} di $X$ è
   un complesso simpliciale astratto $VR(X,r)$ così definito:
   \begin{itemize}
@@ -323,7 +323,7 @@ A questo punto è possibile associare un complesso simpliciale astratto ai nostr
       d(x_i,x_j) \leq r \mathrm{\text{ per tutti gli }}i,j\in\{0,\dots,n\}.
     \end{equation*}
   \end{itemize}
-\end{defn}
+\end{definition}
 
 \begin{rmk}
   Se $r<s$ esiste un'ovvia iniezione $VR(X,r)\to VR(X,s)$, siccome gli insiemi dei vertici coincidono e ogni simplesso di $VR(X,r)$ è anche un simplesso di $VR(X,s)$, quindi la famiglia $\{VR(X,r)\}_{r\in\R}$ forma un complesso simpliciale persistente.
@@ -349,13 +349,13 @@ Gli spazi $\{H_*(VR(X,r),k)\}_{r\in\R}$ racchiudono l'informazione topologica de
 
 Al fine di poter meglio comprendere come sono fatti i gruppi di omologia persistenti, studiamo meglio gli spazi vettoriali persistenti. D'ora in poi per semplicità diremo che $V$ è uno spazio vettoriale persistente invece che indicare esplicitamente tutta la famiglia $\{V_r\}$. Qualora fosse necessario esplicitare i morfismi $f_{s,r}:V_r\to V_s$ li indicheremo con la notazione $(V,f)$.
 
-\begin{defn}
+\begin{definition}
   Sia $I\subseteq \R$. Diremo che $I$ è un intervallo di $\R$ se dati comunque $r,s\in I$ tali che $r<s$ e $t$ tale che $r<t<s$, allora anche $t\in I$. Definiamo \emph{moduli intervallo} gli spazi vettoriali persistenti $k_I$, dove $I$ è un intervallo di $\R$, tali che $k_I(r) = k$ se $r\in I$ e $0$ altrimenti.
-\end{defn}
+\end{definition}
 
-\begin{defn}
+\begin{definition}
   Si definisce \emph{somma diretta} di due spazi vettoriali persistenti $(V,f^V)$ e $(W,f^W)$ lo spazio vettoriale persistente $U$ definito come $U_r = V_r\oplus W_r$ per ciascun $r$ e $f^U_{s,r} = f^V_{s,r}\oplus f^W_{s,r}$, e lo si indica come $(V\oplus W,f^V\oplus f^W)$.
-\end{defn}
+\end{definition}
 
 \begin{figure}[ht]
   \begin{center}
@@ -385,7 +385,7 @@ $k_{I_1}\oplus k_{I_2}\oplus\cdots \oplus k_{I_n}$ può essere rappresentata con
 
 \subsection{Codice a barre persistente di una nube di punti}
 
-Con la teoria sviluppata finora è possibile, a partire da una collezione di dati sotto forma di nube di punti, costruire un codice a barre associato alla sua omologia persistente. Sia $X$ una nube di punti, cioé un sottinsieme finito di $\R^n$, possiamo costruire una torre di inclusioni di complessi simpliciali astratti
+Con la teoria sviluppata finora è possibile, a partire da una collezione di dati sotto forma di nube di punti, costruire un codice a barre associato alla sua omologia persistente. Sia $X$ una nube di punti, cioé un sottinsieme finito di $\R^n$, possiamo costruire una filtrazione di complessi simpliciali astratti
 \begin{equation*}
   VR(X,r_0)\into VR(X,r_1)\into VR(X,r_2)\into \dots
 \end{equation*}
@@ -405,7 +405,7 @@ Tuttavia, è possibile che un codice a barre persistente non mostri questa duali
 \end{figure}
 
 Per chiarezza esplicitiamo il procedimento seguendo \cite{Curry}.
-\begin{defn}[Persistenza di una nube di punti]
+\begin{definition}[Persistenza di una nube di punti]
   Il processo di persistenza di una nube di punti è l'insieme delle seguenti operazioni.
   \begin{enumerate}
     \item Sia $X$ una nube di punti, cioé un sottinsieme finito di $\R^n$.
@@ -415,11 +415,11 @@ Per chiarezza esplicitiamo il procedimento seguendo \cite{Curry}.
     \end{equation*}
     \item Il \Cref{thm:persistentdecomposition} fornisce un multi insieme di intervalli, che può essere visualizzato come codice a barre persistente.
   \end{enumerate}
-\end{defn}
+\end{definition}
 
 Utilizzando i codici a barre persistenti si riescono a individuare buchi $n$-dimensionali e a tracciarne l'evoluzione su più scale, o più in generale si possono distinguere due nubi di punti sulla base di proprietà omologiche dei complessi persistenti associati. Nel \cref{cap:esempi} mostreremo come è possibile utilizzare l'omologia persistente per fare questo tipo di analisi.
 
-\section{Persistenza funzionale}
+\section{Persistenza funzionale}\label{sec:functionalpersistence}
 
 Nella \cref{sec:persistenthomology} si è visto come calcolare l'omologia persistente di una nube di punti, tuttavia non tutte le forme di enteresse vengono evidenziate dai codici a barre persistenti in questo modo. Si consideri ad esempio la \cref{fig:threeflares} in cui sono presenti tre rami che si distaccano da un nucleo centrale.
 
@@ -431,13 +431,13 @@ Nella \cref{sec:persistenthomology} si è visto come calcolare l'omologia persis
 
 \`E possibile costruire un complesso simpliciale persistente la cui omologia evidenzi questa ramificazione? La risposta è fortunatamente positiva. Di seguito mostreremo la procedura più generale detta persistenza funtoriale, e vedremo come il caso in esame segue come suo caso particolare.
 
-Sia $f:X\to \R$ una funzione reale definita su uno spazio metrico finito $X$. Allora per ogni $r\in \R$ possiamo considerare le preimmagini $X_r=f^{\shortleftarrow}([-\infty,r])$. Fissato un parametro $0<\rho\in \R$ si possono costruire i complessi di Vietoris-Rips
+Sia $f:X\to \R$ una funzione reale definita su uno spazio metrico finito $X$. Allora per ogni $r\in \R$ possiamo considerare le preimmagini $X_r=f^{\shortleftarrow}([-\infty,r])$. Fissato un parametro $0<\rho\in \R$ una filtrazione di complessi di Vietoris-Rips
 \begin{equation*}
   VR(X_{r_0},\rho)\into VR(X_{r_1},\rho)\into VR(X_{r_2},\rho)\into \cdots
 \end{equation*}
 e, applicando $H_q(-)$ a questi complessi, si ottiene lo spazio vettoriale persistente
 \begin{equation*}
-  H_q(VR(X_{r_0}))\to H_q(VR(X_{r_1},\rho))\to H_q(VR(X_{r_2},\rho))\to \cdots
+  H_q(VR(X_{r_0},\rho))\to H_q(VR(X_{r_1},\rho))\to H_q(VR(X_{r_2},\rho))\to \cdots
 \end{equation*}
 
 Infine, anche in questo caso il \cref{thm:persistentdecomposition} ci consente di costruire un codice a barre persistente.
@@ -474,3 +474,46 @@ Il codice a barre persistente corrispondente è mostrato in \cref{fig:threeflare
   \caption{Persistenza funzionale}
   \label{fig:threeflarepersistence}
 \end{figure}
+
+\section{Persistenza multidimensionale}
+
+Nell'ultimo esempio nella \cref{sec:functionalpersistence} si può notare che abbiamo costruito una filtrazione di complessi simpliciali $(VR(X_r,\rho), \phi)$ al variare di $r\in [0,1]$, mantenendo però $\rho$ costante.
+
+Tuttavia, sarebbe altrettanto valido fissare un parametro $r$ e costruire la filtrazione al variare di $\rho$ e calcolare l'omologia di questa. Più in generale, data qualunque funzione $f:X\to \R$ è possibile considerare le filtrazioni $VR(f^\shortleftarrow(-\infty,r],\rho)$ per valori fissati di $r$ o $\rho$ e calcolare il codice a barre persistente, tuttavia questo processo va contro il motivo iniziale per cui era stata introdotta l'omologia persistente: evitare di scegliere la scala di grandezza.
+
+Si osservi che se $r<s$ e $\rho<\sigma$, allora
+$VR(f^\shortleftarrow(-\infty,r],\rho)\into VR(f^\shortleftarrow(-\infty,s],\sigma)$ induce
+una mappa $H_q(VR(f^\shortleftarrow(-\infty,r],\rho))\to H_q(VR(f^\shortleftarrow(-\infty,s],\sigma))$, quindi abbiamo a che fare essenzialmente con una filtrazione a più parametri, detta \emph{multifiltrazione} (vd. \cref{def:multifiltration}). Lo studio dell'omologia di una multifiltrazione è detto \emph{persistenza multidimensionale} di cui mostreremo brevemente i principali risultati seguendo \cite{Carlsson2009a}. Anticipiamo già che non è possibile trovare risultati come il \Cref{thm:persistentdecomposition} che garantiscono l'esistenza di invarianti completi.
+
+L'oggetto di studio della persistenza multidimensionale sono i moduli persistenti indicizzati da un insieme con un ordine quasi-parziale.\footnote{Si confronti con \cref{def:persistentset}, dove l'insieme degli indici è totalmente ordinato, $\R$}
+
+Dati $u,v\in\N^n$, diciamo che $u\lesssim v$ se $u_i \leq v_i$ per ogni $1\leq i\leq n$.
+
+Un \emph{monomio} in $x_1,\dots,x_n$ è un prodotto della forma
+\begin{equation*}
+  x_1^{v_1}\cdot x_2^{v_2} \cdots x_n^{v_n}
+\end{equation*}
+con $v_i\in\N$, che denoteremo $x^v$ con $v=(v_1,\dots,v_n)\in\N^n)$. Un \emph{polinomio} in $x_1,\dots,x_n$ a coefficienti in un campo $k$ è una combinazione lineare finita $\sum_v \alpha_v x^v$ con $\alpha_v\in k$. L'insieme di questi polinomi è indicato con $k[x_1,\dots,x_n]$ ed ha un'ovvia struttura di anello.
+
+Un \emph{anello $n$-graduato} è un anello $R$ con una decomposizione in gruppi abeliani $R\cong \oplus_v R_v$, $v\in\N^n$ tale che $R_u\cdot R_v\subseteq R_{u+v}$. L'anello dei polinomi $A_n = k[x_1,\dots,x_n]$ è un anello $n$-graduato da
+$k[x_1,\dots,x_n]\cong \oplus_v A_v$ dove $A_v= kx^v$, $v\in\N^n$.
+
+Un \emph{modulo $n$-graduato} su un anello $n$-graduato $R$ è un $R$-modulo $M$ insieme a una decomposizione $M \cong \oplus_v M_v$, $v\in\N^n$ tale che $R_u\cdot M_v \subseteq M_{u+v}$.
+
+\begin{definition}\label{def:multifiltration}
+  Dato uno spazio $X$, una \emph{multifiltrazione} $\{X_v\}_{v\in\N^n}$ è una collezione di sottinsiemi $X_v\subseteq X$ tali che $X_u\subseteq X_v$ per ogni $u\lesssim v$ e tali che il diagramma
+  \begin{equation*}
+  \begin{tikzcd}
+    X_u\arrow{r}\arrow{d}& X_{v_1}\arrow{d}\\
+    X_{v_2}\arrow{r}& X_w
+  \end{tikzcd}
+  \end{equation*}
+  commuta per ogni $u\lesssim v_1,v_2\lesssim w$.
+\end{definition}
+I complessi di Vietoris-Rips $VR(f^\shortleftarrow(-\infty,r_i],\rho_j)$ dalla \cref{sec:functionalpersistence} sono un esempio di multifiltrazione.
+
+\begin{definition}
+  Un \emph{modulo persistente} $M$ è una famiglia di $k$-moduli $\{M_v\}_{v\in\N^n}$ insieme con morfismi di moduli $f_{v,u}:M_u\to M_v$ per tutti gli $u\lesssim v$ e tali che $f_{w,v}\circ f_{v,u}=f_{w,u}$ ogniqualvolta $u\lesssim v\lesssim w$.
+\end{definition}
+
+L'omologia di una multifiltrazione di complessi simpliciali è un modulo persistente.

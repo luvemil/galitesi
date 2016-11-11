@@ -27,4 +27,68 @@ allora per la disuguaglianza di Hoeffding la distribuzione di $d(x,y)$ è concen
 
 Ci interessa quindi sviluppare tecniche in grado di rivelare informazioni in spazi metrici di dimensione possibilmente elevata, in particolare vorremmo poter riassumere in un numero finito (piccolo) di variabili l'informazione che ci serve.
 
-Utilizzeremo tecniche topologiche, e le informazioni che queste ci consentiranno di catturare riguardano la \emph{forma} dei dati. In dimensioni elevate è difficile visualizzare un insieme di punti e quindi comprendere se questo abbia una forma interessante, tuttavia utilizzando la topologia è possibile produrre una rappresentazione sintetica di uno spazio complesso mediante una quantità finita di informazioni, e tale che calcolando opportuni invarianti di questa rappresentazione si ricavino informazioni sulla \emph{forma} dello spazio. La topologia consente anche di esprimere mediante quantità precise cosa intendiamo per \emph{forma}.
+Utilizzeremo tecniche di topologia algebrica, e le informazioni che queste ci consentiranno di catturare riguardano la \emph{forma} dei dati. In dimensioni elevate è difficile visualizzare un insieme di punti e quindi comprendere se questo abbia una forma interessante, tuttavia utilizzando la topologia è possibile produrre una rappresentazione sintetica di uno spazio complesso mediante una quantità finita di informazioni, e tale che calcolando opportuni invarianti di questa rappresentazione si ricavino informazioni sulla \emph{forma} dello spazio. La topologia consente anche di esprimere mediante quantità precise cosa intendiamo per \emph{forma}.
+
+Prendendo ad esempio la corona circolare in \cref{fig:annulus}, la proprietà che vogliamo essere in grado di catturare è il fatto che essa contiene essenzialmente un solo loop non banale a meno di omotopia, o in maniera equivalente potremmo dire che ha un unico foro.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.5\textwidth]{gfx/annulus.pdf}
+    \caption{Corona circolare}  \label{fig:annulus}
+  \end{center}
+\end{figure}
+
+Vorremmo anche essere in grado di rappresentare sinteticamente uno spazio mediante simplessi, conservando quanta più informazione possibile sulla sua forma. Ad esempio passando dalla circonferenza al quadrato in \cref{fig:circsquare} perdiamo informazioni sulla curvatura, tuttavia le proprietà topologiche sono invariate.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.7\textwidth]{gfx/circsquare.pdf}
+    \caption{Rappresentazione di una circonferenza}  \label{fig:circsquare}
+  \end{center}
+\end{figure}
+
+Nel tipo di applicazione che ci interessa, tuttavia, l'oggetto di studio non è una varietà come nei casi precedenti, ma una nube di punti, cioé un sottinsieme finito di $\R^d$ o più in generale uno spazio metrico finito $X=\{x_1,\dots,x_n\}$. Anche in questo caso lo spazio può esibire una forma interessante, ad esempio in \cref{fig2:clusters} i dati si dispongono chiaramente in tre gruppi, mentre in \cref{fig2:circle} hanno chiaramente una forma circolare.
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.4\linewidth]{gfx/three_clusters_small.pdf}
+    \caption{Dati divisi in più cluster}
+    \label{fig2:clusters}
+  \end{center}
+\end{figure}
+
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=\linewidth]{gfx/statistical_circle.pdf}
+    \caption{Campionamento da una corona circolare}
+    \label{fig2:circle}
+  \end{center}
+\end{figure}
+
+Come si possono esprimere queste osservazioni mediante tecniche algebriche? Se i nostri dati sono collezionati nell'insieme finito $X=\{x_1,\dots,x_n\}\subseteq \R^d$, possiamo considerare
+\begin{equation*}
+  $\widehat{X}_\varepsilon = \bigcup_{x\in X} B_\varepsilon(x)$
+\end{equation*}
+dove $B_\varepsilon(x)$ è la palla di raggio $\varepsilon$ e centro $x$. Allora per qualche opportuno $\varepsilon >0$ l'insieme $\widehat{X}_\varepsilon$ associato alla \cref{fig2:clusters} diventa del tipo raffigurato in \cref{fig2:clusters_fat}.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=.4\linewidth]{gfx/three_clusters_fat.pdf}
+    \caption{$\widehat{X}_\varepsilon$}
+    \label{fig2:clusters_fat}
+  \end{center}
+\end{figure}
+
+Analogamente al variare di $\varepsilon$ vediamo gli spazi mostrati in \cref{fig2:circlecomparison}.
+
+\begin{figure}[h]
+  \begin{center}
+    \includegraphics[width=.7\paperwidth]{gfx/statistical_circle_comparison.pdf}
+    \caption{$\widehat{Y}_\varepsilon$ al variare di $\varepsilon$}
+    \label{fig2:circlecomparison}
+  \end{center}
+\end{figure}
+
+A questo punto abbiamo a che fare con spazi più o meno noti e, per opportune scelte di $\varepsilon$, si possono calcolare i gruppi di omologia $H_0(\widehat{X}_\varepsilon)$ e $H_1(\widehat{Y}_\varepsilon)$ che racchiudono rispettivamente l'informazione sul numero di cluster in \cref{fig2:clusters} e di loop in \cref{fig2:circle}.
+
+Tuttavia in entrambi questi casi c'è bisogno di selezionare un parametro di scala $\varepsilon$ per cui $\widehat{X}_\varepsilon$ contenga esattamente le informazioni che vogliamo trovare, e questa scelta non sempre è evidente. Ad esempio potrebbe succedere che i dati sono in dimensione talmente alta che non è possibile visualizzarli, oppure proprietà che sono evidenti ad una certa scala scompaiono al variare di $\varepsilon$, mentre ne compaiono di nuove. Quindi siamo alla ricerca di metodi che consentano non solo di dedurre informazioni sulla forma dei dati senza doversi preoccupare della selezione di una scala, ma che riescano anche a mettere in relazione le variazioni di queste proprietà al variare della scala di riferimento. L'insieme delle tecniche che consentono di fare questo e molto altro vanno sotto il nome di Topological Data Analysis (TDA).

@@ -1,0 +1,21 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}%[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+  \draw (0,0) circle (1cm);
+  \draw (0,0) ++(1.5cm,0) edge [double, ->] ++(.5cm,0);
+  \draw (0,0) ++(3.5cm,0) circle (1cm);
+  \foreach \x in {45,135,225,315}{
+    \filldraw (\x:1cm) +(3.5cm,0) circle (0.8pt);
+  }
+  \draw (0,0) ++(5cm,0) edge [double, ->] ++(.5cm,0);
+  \foreach \x in {45,135,225,315}{
+    \filldraw (\x:1cm) +(7cm,0) circle (0.8pt);
+  }
+  % \draw (45:1cm) ++(7cm,0) -- (135:1cm) ++(7cm,0) -- (225:1cm) ++(7cm,0) -- (315:1cm) ++(7cm,0) -- cycle;
+  \draw (7cm,0) +(45:1cm) -- +(135:1cm) -- +(225:1cm) -- +(315:1cm) -- cycle;
+\end{tikzpicture}
+\end{document}

@@ -1,0 +1,13 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}%[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+  \fill[white!20!blue] (0,0) circle (4cm);
+  \fill[white] (0,0) circle (2.5cm);
+  % \fill[white!20!blue] (2.5cm,0cm) -- (4cm,0cm) arc (0:180:4cm) -- (-2.5cm,0cm) arc (180:0:2.5cm) -- cycle;
+  % \fill[white!20!blue] (-2.5cm,0cm) -- (-4cm,0cm) arc (180:360:4cm) -- (2.5cm,0cm) arc (360:180:2.5cm) --cycle;
+\end{tikzpicture}
+\end{document}

@@ -95,6 +95,7 @@ Tuttavia in entrambi questi casi c'è bisogno di selezionare un parametro di sca
 
 Lo sviluppo della TDA è stato iniziato da Carlsson et al. nel 2009 in \cite{Carlsson2009}, con l'obiettivo di riuscire a ricavare a partire da un insieme di dati informazioni \emph{qualitative}, \emph{indipendenti dalla scelta di coordinate} e prediligendo una visione d'insieme. Vi sono stati molti progressi sia nella teoria sia nell'applicazione, ad esempio nello sviluppo della teoria della persistenza multidimensionale \cite{Cerri2013,Carlsson2009a,Adcock2012,Carlsson2009b}, della fondazione categorica della persistenza
 \cite{Curry}, dell'utilizzo della persistenza nell'inferenza statistica \cite{Bubenik2015,Kwitt2015}, e la ricerca è tuttora in corso.
+Alcuni risultati conseguiti utilizzando la TDA sono la determinazione di nuove variabili che influenzano l'attività neurale \cite{Spreemann2015}, la classificazione di traiettorie in robotica \cite{Pokorny2014}, l'identificazione di nuovi tipi di cancro al seno \cite{Lum2013}.
 
 Lo strumento principale della TDA è la persistenza omologica, cioé l'assegnazione ad uno spazio metrico finito di una filtrazione di spazi vettoriali $\{V_r\}_{r\in\R}$ in cui gli spazi vettoriali $V_r$ e le mappe fra essi $V_r\to V_s$ per $r<s$ contengano informazioni sulla \emph{forma} dello spazio in esame.
 
@@ -134,8 +135,10 @@ Si consideri ad esempio la nube di punti in \cref{fig2:doublecircle}. Al variare
   \end{center}
 \end{figure}
 
- La presenza dei due loop è rappresentata dall'omologia persistente dal fatto che $H_1(\widehat{X}_{r_1})$ e $H_1(\widehat{X}_{r_2})$ hanno entrambi dimensione 1. Tuttavia, l'omologia persistente consente anche di distinguere i due loop. Infatti, poiché $r_1<r_2$ l'omologia persistente viene con una mappa $\psi:H_1(\widehat{X}_{r_1})\to H_1(\widehat{X}_{r_2})$ e il fatto che i due loop sono distinti lo si deduce dal fatto che $\psi=0$.
+La presenza dei due loop è rappresentata dall'omologia persistente dal fatto che $H_1(\widehat{X}_{r_1})$ e $H_1(\widehat{X}_{r_2})$ hanno entrambi dimensione 1. Tuttavia, l'omologia persistente consente anche di distinguere i due loop. Infatti, poiché $r_1<r_2$ l'omologia persistente viene con una mappa $\psi:H_1(\widehat{X}_{r_1})\to H_1(\widehat{X}_{r_2})$ e il fatto che i due loop sono distinti lo si deduce dal fatto che $\psi=0$.
 
- Questa proprietà dell'omologia persistente, dettà \emph{funtorialità}, è l'elemento essenziale che rende queste tecniche estremamente utili nelle applicazioni.
+Questa proprietà dell'omologia persistente, dettà \emph{funtorialità}, è l'elemento essenziale che rende queste tecniche estremamente utili nelle applicazioni.
 
- L'altra proprietà fondamentale dell'omologia persistente è enunciata nel \Cref{thm:persistentdecomposition} che garantisce che ogni gruppo di omologia persistente associato ad uno spazio metrico finito può essere rappresentato con un numero finito (idealmente piccolo) di parametri. Questo fatto consente di visualizzare con pochi parametri un insieme di dati potenzialmente complesso, inoltre lo spazio di questi parametri può essere reso uno spazio metrico completo (come in \cite{Kwitt2015}), aprendo spazio all'utilizzo di tecniche di statistica e machine learning.
+L'altra proprietà fondamentale dell'omologia persistente è enunciata nel \Cref{thm:persistentdecomposition} che garantisce che ogni gruppo di omologia persistente associato ad uno spazio metrico finito può essere rappresentato con un numero finito (idealmente piccolo) di parametri. Questo fatto consente di visualizzare con pochi parametri un insieme di dati potenzialmente complesso, inoltre lo spazio di questi parametri può essere reso uno spazio metrico completo (come in \cite{Kwitt2015}), aprendo spazio all'utilizzo di tecniche di statistica e machine learning.
+
+Nel \cref{ch:teoria} ci occuperemo di sviluppare l'omologia persistente, richiamando velocemente le nozioni necessarie di topologia algebrica e in particolare l'omologia simpliciale, mentre nel \cref{cap:esempi} mostreremo alcuni esempi su dati sintetici di codici a barre persistenti.

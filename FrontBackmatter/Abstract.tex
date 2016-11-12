@@ -10,15 +10,15 @@
 
 \chapter*{Sommario}
 
-Lo studio di tecniche per analizzare grandi dataset è più che mai attuale vista la grande quantità di dati che viene prodotta dai più disparati settori delle scienze applicate e dell'industria, e vi sono quotidianamente progressi sia teorici che pratici.
+Lo studio dei Big Data è più che mai attuale vista la grande quantità di dati che viene prodotta dai più disparati settori delle scienze applicate e dell'industria, e vi è sempre più necessità di tecniche di analisi di tipo qualitativo, oltre che quantitativo.
 
-Da un lato vi è stato lo sviluppo di strumenti di analisi estremamente generali, come quelle tecniche che insieme vengono chiamate Machine Learning (ML), per i quali esistono pacchetti software estremamente moderni che possono essere usati in ambiente production, oltre che per la ricerca. Dall'altro, l'efficienza dei moderni processori ha consentito l'applicazione di queste tecniche ad ampio spettro su enormi quantità di dati non strutturati.
+Da un lato vi è stato lo sviluppo di strumenti di analisi estremamente generali, come quelle tecniche che insieme vengono chiamate Machine Learning, per i quali esistono pacchetti software estremamente moderni che possono essere usati in ambiente production, oltre che per la ricerca. Dall'altro, l'efficienza dei moderni processori ha consentito l'applicazione di queste tecniche ad ampio spettro su enormi quantità di dati non strutturati.
 
 Un nuovo tipo di problema, tuttavia, è emerso: ora che abbiamo a disposizione tutti questi dati non strutturati, che spesso sono collezioni di punti in spazi vettoriali di dimensione elevata, vorremmo capirne la struttura globale.
 
-Vi sono già alcune tecniche sviluppate a questo scopo, come PCA (\emph{Principal Component Analysis}), che tuttavia possono non essere sufficientemente sensibili alla struttura dei dati, oppure i dati possono essere in un formato che difficilmente può essere analizzato usando queste tecniche, ad esempio anziché punti di spazi vettoriali potremmo avere semplicemente una funzione distanza fra i punti del campione che stiamo analizzando, e da questa metrica vorremmo ricostruire la struttura dei dati. (NMDC: add picture)
+Le tecniche attualmente utilizzate tendono a non essere sufficientemente sensibili alla struttura dei dati o a non individuare con accuratezza le loro proprietà geometriche. Per risolvere questo problema sono state sviluppate una serie di tecniche, che insieme vengono chiamate Topological Data Analysis (TDA), alla cui base c'è l'omologia persistente, che noi ci occuperemo di presentare.
 
-Per risolvere questo problema sono state sviluppate una serie di tecniche, che insieme vengono chiamate Topological Data Analysis (TDA). Di queste noi ci occuperemo di presentare l'omologia persistente e l'algoritmo Mapper. La prima si occupa di studiare gli invarianti topologici dei dati \emph{su tutte le scale} allo stesso tempo, e può essere usata da sola per scoprire strutture all'interno dei dati, ad esempio componenti connesse o presenza di buchi ($n$-dimensionali), o in congiunzione con tecniche di ML come SVM (\emph{Support Vector Machines}), mediante la definizione di opportuni kernel nello spazio dei persistence diagrams. Il secondo produce un riassunto topologico dei dati sotto forma di grafo e può essere usato da solo o per preprocessare i dati prima di procedere con una pipeline PCA.
+L'omologia persistente consente di studiare gli invarianti topologici dei dati \emph{su tutte le scale} allo stesso tempo, e può essere usata da sola per scoprire strutture all'interno dei dati, ad esempio componenti connesse o presenza di buchi ($n$-dimensionali), o in congiunzione con tecniche di Machine Learning come le (\emph{Support Vector Machines}), mediante la definizione di opportuni kernel nello spazio dei diagrammi persistenti.
 
 \vfill
 

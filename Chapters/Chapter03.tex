@@ -2,8 +2,23 @@
 \chapter{Esempi e applicazioni}\label{cap:esempi}
 %************************************************
 
-NMDC: aggiugnere esempi come statistical machine learning usando persistence diagrams
+In questo capitolo mostreremo alcuni esempi con dati sintetici che mostrano il tipo di visualizzazione che si riesce ad ottenere utilizzando l'omologia persistente, poi vedremo come la TDA è stata usata in diversi studi per ricostruire la struttura da un insieme di \emph{patch} ad alto contrasto estratti da immagini naturali.
 
-\section{Sezione 1 Capitolo 3}
+\section{Esempi in basse dimensioni}
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Come primi esempi mostriamo in \cref{fig:examplecirclesbarcodes} i codici a barre persistenti rispettivamente di un cerchio nel piano e di due cerchi nel piano.
+
+\begin{figure}[h]
+  \caption{Esempi di codici a barre persistenti}
+  \label{fig:examplecirclesbarcodes}
+  \centering
+  \includegraphics[width=.8\linewidth]{gfx/circle_persistence.pdf}
+  \subcaption{Estrazione casuale da un singolo cerchio}
+  \centering
+  \includegraphics[width=.8\linewidth]{gfx/two_circles.pdf}
+  \subcaption{Estrazione casuale da due cerchi}
+\end{figure}
+
+Anche in questi casi banali è possibile osservare come la diversa distribuzione dei punti sui cerchi causa interssanti artefatti, come si può osservare dall'omologia persistente 0-dimensionale nel caso dei due cerchi, in cui la presenza di due componenti connesse non è così marcatamente evidente dal codice a barre persistente.
+
+(NMDC: aggiungere toro e sfera)

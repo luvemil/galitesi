@@ -1,0 +1,21 @@
+\documentclass[border=1pt,tikz]{standalone}
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\begin{tikzpicture}%[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+  \draw[thick] (0,0) circle (2cm);
+  \draw[blue,thick] (0:2cm and 1cm) arc (0:60:2cm and 1cm);
+  \draw[blue,thick] (66:2cm and 1cm) arc (66:114:2cm and 1cm);
+  \draw[blue,thick] (120:2cm and 1cm) arc (120:180:2cm and 1cm);
+  \draw[yellow,thick] (0,0) ellipse (1cm and 2cm);
+  \draw[white,ultra thick] (204:1cm and 2cm) arc (204:210:1cm and 2cm);
+  \draw[white,ultra thick] (330:1cm and 2cm) arc (330:336:1cm and 2cm);
+  \draw[blue,thick] (180:2cm and 1cm) arc (180:360:2cm and 1cm);
+  \foreach \x in {0,90,180,270}{
+    \filldraw (\x:2cm) circle (1pt);
+    \filldraw[gray] (\x:2cm) circle (.8pt);
+  }
+\end{tikzpicture}
+\end{document}

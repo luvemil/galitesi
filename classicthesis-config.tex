@@ -50,6 +50,7 @@
 \newcommand{\myTime}{Novembre 2016\xspace}
 \newcommand{\myVersion}{version 4.1\xspace}
 
+
 % ********************************************************************
 % Setup, finetuning, and useful commands
 % ********************************************************************
@@ -72,6 +73,13 @@
 \newcommand{\Vectk}{\ensuremath{\mathbf{Vect}_k}}
 \newcommand{\Top}{\ensuremath{\mathbf{Top}}}
 \newcommand{\into}{\hookrightarrow}
+
+\usepackage{mathtools,xparse}
+
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert}
+\NewDocumentCommand{\normD}{ s O{} m }{%
+  \IfBooleanTF{#1}{\norm*{#3}}{\norm[#2]{#3}}_{D}%
+}
 % ****************************************************************************************************
 
 

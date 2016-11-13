@@ -2,7 +2,7 @@
 \chapter{Esempi e applicazioni}\label{cap:esempi}
 %************************************************
 
-In questo capitolo mostreremo alcuni esempi con dati sintetici che mostrano il tipo di visualizzazione che si riesce ad ottenere utilizzando l'omologia persistente, poi vedremo come la TDA è stata usata in diversi studi per ricostruire la struttura da un insieme di \emph{patch} ad alto contrasto estratti da immagini naturali.
+In questo capitolo mostreremo alcuni esempi con dati sintetici che mostrano il tipo di visualizzazione che si riesce ad ottenere utilizzando l'omologia persistente, poi vedremo come la TDA è stata usata in diversi studi per ricostruire la struttura di un insieme di \emph{patch} ad alto contrasto estratte da immagini naturali.
 
 \section{Esempi in basse dimensioni}
 
@@ -24,7 +24,7 @@ Anche in questi casi banali è possibile osservare come la diversa distribuzione
 
 \section{Struttura di un insieme di immagini}
 
-In questa sezione ripercorreremo lo studio omologico di un insieme di costruito da
+In questa sezione ripercorreremo lo studio omologico di un insieme di immagini costruito da
 Lee, Pedersen e Mumford in \cite{Lee2003} e analizzato in \cite{Carlsson2008} e \cite{DeSilva2004}.
 
 L'insieme di dati è composto da immagini in bianco e nero, catturate mediante una fotocamera digitale, e si può pensare a ciascuna di queste immagini come a un vettore di pixel in uno spazio vettoriale di dimensione estremamente alta, e dove la coordinata corrispondente a un certo pixel è il valore nella scala di grigi di quel pixel.
@@ -37,13 +37,13 @@ L'insieme di dati è composto da immagini in bianco e nero, catturate mediante u
   \end{center}
 \end{figure}
 
-Poiché la dimensione di questo problema è estremamente elevate è impossibile pensare di analizzare direttamente direttamente questo insieme, tuttavia si può studiare il problema di dimensione più ridotta di studiare la statistica delle piccole patch (blocchi $3\times 3$ estratti dalle immagini) ad alto contrasto, come quelle in \cref{fig:examplepatches}.
+Poiché la dimensione di questo problema è estremamente elevate è impossibile pensare di analizzare direttamente questo insieme, tuttavia si può studiare il problema di dimensione più ridotta di descrivere la statistica delle piccole patch (blocchi $3\times 3$ estratti dalle immagini) ad alto contrasto, come quelle in \cref{fig:examplepatches}.
 
-Detto $\mathcal{M}$ l'insieme di immagini che si vuole sturiare, il procedimento che porta a selezionare le patch su cui viene effettuata l'anlisi è il seguente:
+Detto $\mathcal{M}$ l'insieme di immagini che si vuole studiare, il procedimento che porta a selezionare le patch su cui viene effettuata l'anlisi è il seguente:
 \begin{enumerate}
   \item Da ogni immagine di $\mathcal{M}$ vengono estratte casualmente un numero $L$ elevato di patch $3\times 3$. Tutte queste patch vengono considerate come un sottinsieme $\mathcal{P}_1$ di $\R^9$.
-  \item Ogni $x\in\mathcal{P}$ viene riscalato in $\tilde{x}$ con $\tilde{x}_i = log(x_i)$.
-  \item Per ogni vettore $\tilde{x}$ si calcola il suo contrasto (detto anche $D$-norma) $\normD{\tilde{x}}=\sqrt{\tilde{x}^\mathbf{T}D\tilde{x}}$, dove $D$ è una forma bilineare che tiene conto della differenza di ciascun pixel della patch con quelli adiacenti e definita nel seguente modo: scriviamo $i\sim j$ se i pixel corrispondenti all'$i$-ma e $j$-ma coordinata rispettivamente sono adiacenti, e definiamo
+  \item Ogni $x\in\mathcal{P}_1$ viene riscalato in $\tilde{x}$ con $\tilde{x}_i = log(x_i)$.
+  \item Per ogni vettore $\tilde{x}$ si calcola il suo contrasto (detto anche $D$-norma) $\normD{\tilde{x}}=\sqrt{\tilde{x}^\mathbf{T}D\tilde{x}}$, dove $D$ è una forma quadratica che tiene conto della differenza di ciascun pixel della patch con quelli adiacenti e definita nel seguente modo: scriviamo $i\sim j$ se i pixel corrispondenti all'$i$-ma e $j$-ma coordinata rispettivamente sono adiacenti, e definiamo
   \begin{equation*}
     \normD{x} = \sqrt{\sum_{i\sim j}(x_i-x_j)^2}.
   \end{equation*}
@@ -54,10 +54,10 @@ Detto $\mathcal{M}$ l'insieme di immagini che si vuole sturiare, il procedimento
 
 I dati così elaborati si trovano adesso su un ellissoide $S^7\subseteq\R^9$, indichiamo con $\widetilde{\mathcal{M}}$ l'insieme delle patch rinormalizzate. Nel caso analizzato in \cite{Lee2003} e \cite{Carlsson2008} l'insieme è costituito da $4.5 \times 10^6$ patch.
 
-Come è stato fatto nella \cref{sec:functionalpersistence} vogliamo filtrare i dati per densità. Questa volta useremo come funzione di densità $e_k$ con $k$ intero positivo, dove $e_k(x)$ è la distanza di $x$ dal $k$-mo punto di $\widetilde{\mathcal{M}}$ più vicino a $x$. Poiché $e_k$ è una misura inversa di densità, siamo interessati a punti che abbiano $e_k$ piccolo. Questo giustifica la seguente definizione.
+Come è stato fatto nella \cref{sec:functionalpersistence} vogliamo filtrare i dati per densità. Questa volta useremo come funzione di densità $d_k$ con $k$ intero positivo, dove $d_k(x)$ è la distanza di $x$ dal $k$-mo punto di $\widetilde{\mathcal{M}}$ più vicino a $x$. Poiché $d_k$ è una misura inversa di densità, siamo interessati a punti che abbiano $d_k$ piccolo. Questo giustifica la seguente definizione.
 
 \begin{definition}
-  Dato un intero $k$ e una percentuale $p$, definiamo il sottinsieme $X(k,p)\subseteq\widetilde{\mathcal{M}}$ come il $p\%$ più piccolo secondo $e_k$.
+  Dato un intero $k$ e una percentuale $p$, definiamo il sottinsieme $X(k,p)\subseteq\widetilde{\mathcal{M}}$ come il $p\%$ più piccolo secondo $d_k$.
 \end{definition}
 
 \begin{figure}[ht]
@@ -131,12 +131,12 @@ Possiamo anche visualizzare le patch corrispondenti ai due nuovi cerchi (detti s
   \end{center}
 \end{figure}
 
-Infine, $X(15,30)$ è contenuto in un insieme di patch che forma una bottiglia di Klein, in \cref{fig:kleinpatch} vediamo come si dispongono i cerchi principali e secondari sulla bottoglia di Klein e come variano le patch.
+Infine, sappiamo da \cite{Carlsson2008} che $X(15,30)$ è contenuto in un insieme di patch che forma una bottiglia di Klein. In \cref{fig:kleinpatch} vediamo come si dispongono i cerchi principali e secondari sulla bottoglia di Klein e come variano le patch.
 
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[width=.6\linewidth]{gfx/kleinpatches.pdf}
-    \caption{Immersione di $C_3$ nella bottiglia di klein}
+    \caption{Immersione di $C_3$ nella bottiglia di Klein}
     \label{fig:kleinpatch}
   \end{center}
 \end{figure}

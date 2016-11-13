@@ -5,7 +5,7 @@
 \pagestyle{empty}
 \begin{document}
 \begin{tikzpicture}%[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-  \draw[thick] (0,0) circle (2cm);
+  \draw[red,thick] (0,0) circle (2cm);
   \draw[blue,thick] (0:2cm and 1cm) arc (0:60:2cm and 1cm);
   \draw[blue,thick] (66:2cm and 1cm) arc (66:114:2cm and 1cm);
   \draw[blue,thick] (120:2cm and 1cm) arc (120:180:2cm and 1cm);

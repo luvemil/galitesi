@@ -4,7 +4,7 @@
 \usetikzlibrary{arrows}
 \pagestyle{empty}
 \begin{document}
-\definecolor{qqzzcc}{rgb}{0.,0.6,0.8}
+\definecolor{qqzzcc}{rgb}{0.49019607843137253,0.49019607843137253,1.}
 \begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
 \clip(-5.635220622502833,-4.254300351697167) rectangle (5.330671090909379,5.168861348801525);
 \draw [color=qqzzcc,fill=qqzzcc,fill opacity=1.0] (-4.52,4.54) circle (0.45cm);

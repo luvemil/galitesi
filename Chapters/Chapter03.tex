@@ -21,9 +21,8 @@ Come primi esempi mostriamo in \cref{fig:examplecirclesbarcodes} i codici a barr
 
 Anche in questi casi banali è possibile osservare come la diversa distribuzione dei punti sui cerchi causa interssanti artefatti, come si può osservare dall'omologia persistente 0-dimensionale nel caso dei due cerchi, in cui la presenza di due componenti connesse non è così marcatamente evidente dal codice a barre persistente.
 
-(NMDC: aggiungere toro e sfera)
 
-\section{Struttura dell'insieme delle patch $3\times 3$ in una collezione di immagini naturali}
+\section{Struttura di un insieme di immagini}
 
 In questa sezione ripercorreremo lo studio omologico di un insieme di costruito da
 Lee, Pedersen e Mumford in \cite{Lee2003} e analizzato in \cite{Carlsson2008} e \cite{DeSilva2004}.
@@ -61,19 +60,37 @@ Come è stato fatto nella \cref{sec:functionalpersistence} vogliamo filtrare i d
   Dato un intero $k$ e una percentuale $p$, definiamo il sottinsieme $X(k,p)\subseteq\widetilde{\mathcal{M}}$ come il $p\%$ più piccolo secondo $e_k$.
 \end{definition}
 
-A questo punto possiamo studiare al variare dei parametri $k$ e $p$ le proprietà topologiche di $X(k,p)$. Per $k$ grande i dati si dispongono essenzialmente in cerchio, come mostrato dal diagramma di persistenza \cref{fig:k300persistence} tratto da \cite{Carlsson2008}.
-
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[width=.8\linewidth]{gfx/image_patches_k300.pdf}
-    \caption{L'omologia persistente di $X(300,30)$}
-    \label{fig:k300persistence}
+    \begin{subfigure}[b]{.4\textwidth}
+      \includegraphics[width=\textwidth]{gfx/image_patches_k300.pdf}
+      \caption{$X(300,30)$}\label{fig:k300persistence}
+    \end{subfigure}
+    \begin{subfigure}[b]{.4\textwidth}
+      \includegraphics[width=\textwidth]{gfx/image_patches_k15.pdf}
+      \caption{$X(15,30)$}\label{fig:k15persistence}
+    \end{subfigure}
+    \caption{Omologia persistente di $X(k,p)$}
   \end{center}
 \end{figure}
 
-In \cite{Carlsson2008} e \cite{DeSilva2004} viene mostrato come sia possibile parametrizzare i dati così selezionati in un cerchio, detto primario. In \cref{fig:primarycircle} lo vediamo rappresentato insieme alle patch che lo compongono.
+A questo punto possiamo studiare al variare dei parametri $k$ e $p$ le proprietà topologiche di $X(k,p)$. Per $k$ grande i dati si dispongono essenzialmente in cerchio, come mostrato dal diagramma di persistenza \cref{fig:k300persistence} tratto da \cite{Carlsson2008}.
 
-% TODO draw primary circle
+% \begin{figure}[ht]
+%   \begin{center}
+%     \begin{subfigure}
+%       \includegraphics[width=.4\linewidth]{gfx/image_patches_k300.pdf}
+%       \subcaption{$X(300,30)$}
+%       \label{fig:k3001persistence}
+%     \end{subfigure}
+%     \begin{subfigure}
+%       \includegraphics[width=.4\linewidth]{gfx/image_patches_k15.pdf}
+%       \subcaption{$X(15,30)$}
+%       \label{fig:k15persistence}
+%     \end{subfigure}
+%   \end{center}
+% \end{figure}
+
 \begin{figure}[ht]
   \begin{center}
     \includegraphics[width=.4\linewidth]{gfx/primarycircle_labels.pdf}
@@ -82,17 +99,17 @@ In \cite{Carlsson2008} e \cite{DeSilva2004} viene mostrato come sia possibile pa
   \end{center}
 \end{figure}
 
+In \cite{Carlsson2008} e \cite{DeSilva2004} viene mostrato come sia possibile parametrizzare i dati così selezionati in un cerchio, detto primario. In \cref{fig:primarycircle} lo vediamo rappresentato insieme alle patch che lo compongono.
+
 Se scegliamo un parametro $k$ più piccolo (e quindi selezioniamo punti più densi) vengono scoperte nuove strutture, come si vede dall'omologia persistente di $X(15,30)$ in \cref{fig:k15persistence} (presa da \cite{Carlsson2008}).
 
-\begin{figure}[ht]
-  \begin{center}
-    \includegraphics[width=.8\linewidth]{gfx/image_patches_k15.pdf}
-    \caption{L'omologia persistente di $X(15,30)$}
-    \label{fig:k15persistence}
-  \end{center}
-\end{figure}
-
-Vi sono diversi spazi topologici che hanno questa omologia, e cioé connessi con primo numero di Betti $\beta_1=5$, ad esempio lo spazio mostrato in \cref{fig:patchshape}. In \cite{Carlsson2008} viene data una parametrizzazione dei dati mediante uno spazio di polinomi, e con questi è possibile vedere che la forma rappresentate in \cref{fig:patchshape} è effettivamente corretta.
+% \begin{figure}[ht]
+%   \begin{center}
+%     \includegraphics[width=.8\linewidth]{gfx/image_patches_k15.pdf}
+%     \caption{L'omologia persistente di $X(15,30)$}
+%     \label{fig:k15persistence}
+%   \end{center}
+% \end{figure}
 
 \begin{figure}[ht]
   \begin{center}
@@ -101,6 +118,8 @@ Vi sono diversi spazi topologici che hanno questa omologia, e cioé connessi con
     \label{fig:patchshape}
   \end{center}
 \end{figure}
+
+Vi sono diversi spazi topologici che hanno questa omologia, e cioé connessi con primo numero di Betti $\beta_1=5$, ad esempio lo spazio mostrato in \cref{fig:patchshape}. In \cite{Carlsson2008} viene data una parametrizzazione dei dati mediante uno spazio di polinomi, e con questi è possibile vedere che la forma rappresentate in \cref{fig:patchshape} è effettivamente corretta.
 
 Possiamo anche visualizzare le patch corrispondenti ai due nuovi cerchi (detti secondari), in \cref{fig:secondarycircle}
 

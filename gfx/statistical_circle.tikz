@@ -57,8 +57,5 @@
 \draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (9.941733371440776,-4.427530679458557) circle (0.15cm);
 \draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (-0.7442444955968,10.107024003119102) circle (0.15cm);
 \draw [color=xdxdff,fill=xdxdff,fill opacity=1.0] (5.895641988097494,9.349303732320275) circle (0.15cm);
-\begin{scriptsize}
-\draw [color=black] (0.,0.)-- ++(-1.0pt,0 pt) -- ++(2.0pt,0 pt) ++(-1.0pt,-1.0pt) -- ++(0 pt,2.0pt);
-\end{scriptsize}
 \end{tikzpicture}
 \end{document}

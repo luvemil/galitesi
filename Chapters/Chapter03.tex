@@ -30,7 +30,15 @@ Lee, Pedersen e Mumford in \cite{Lee2003} e analizzato in \cite{Carlsson2008} e 
 
 L'insieme di dati è composto da immagini in bianco e nero, catturate mediante una fotocamera digitale, e si può pensare a ciascuna di queste immagini come a un vettore di pixel in uno spazio vettoriale di dimensione estremamente alta, e dove la coordinata corrispondente a un certo pixel è il valore nella scala di grigi di quel pixel.
 
-Poiché la dimensione di questo problema è estremamente elevate è impossibile pensare di analizzare direttamente direttamente questo insieme, tuttavia si può studiare il problema di dimensione più ridotta di studiare la statistica delle piccole patch (blocchi $3\times 3$ estratti dalle immagini) ad alto contrasto.
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.8\linewidth]{gfx/example_patches.pdf}
+    \caption{Esempi di patch $3\times 3$ ad alto contrasto}
+    \label{fig:examplepatches}
+  \end{center}
+\end{figure}
+
+Poiché la dimensione di questo problema è estremamente elevate è impossibile pensare di analizzare direttamente direttamente questo insieme, tuttavia si può studiare il problema di dimensione più ridotta di studiare la statistica delle piccole patch (blocchi $3\times 3$ estratti dalle immagini) ad alto contrasto, come quelle in \cref{fig:examplepatches}.
 
 Detto $\mathcal{M}$ l'insieme di immagini che si vuole sturiare, il procedimento che porta a selezionare le patch su cui viene effettuata l'anlisi è il seguente:
 \begin{enumerate}
@@ -45,9 +53,7 @@ Detto $\mathcal{M}$ l'insieme di immagini che si vuole sturiare, il procedimento
   \item Si normalizza ciascun vettore dividendolo per la sua $D$-norma.
 \end{enumerate}
 
-I dati così elaborati si trovano adesso su un ellissoide $S^7\subseteq\R^9$, indichiamo con $\widetilde{\mathcal{M}}$ l'insieme delle patch rinormalizzate.
-
-% TODO aggiungere esempi di patch
+I dati così elaborati si trovano adesso su un ellissoide $S^7\subseteq\R^9$, indichiamo con $\widetilde{\mathcal{M}}$ l'insieme delle patch rinormalizzate. Nel caso analizzato in \cite{Lee2003} e \cite{Carlsson2008} l'insieme è costituito da $4.5 \times 10^6$ patch.
 
 Come è stato fatto nella \cref{sec:functionalpersistence} vogliamo filtrare i dati per densità. Questa volta useremo come funzione di densità $e_k$ con $k$ intero positivo, dove $e_k(x)$ è la distanza di $x$ dal $k$-mo punto di $\widetilde{\mathcal{M}}$ più vicino a $x$. Poiché $e_k$ è una misura inversa di densità, siamo interessati a punti che abbiano $e_k$ piccolo. Questo giustifica la seguente definizione.
 
@@ -65,16 +71,16 @@ A questo punto possiamo studiare al variare dei parametri $k$ e $p$ le propriet�
   \end{center}
 \end{figure}
 
-In \cite{Carlsson2008} e \cite{DeSilva2004} viene mostrato come sia possibile parametrizzare i dati così selezionati in un cerchio, detto primario. In \cref{fig:primarycircle} lo vediamo rappresentato insieme alle patch che lo compongono. Queste sono le patch in assoluto più frequenti nei dati.
+In \cite{Carlsson2008} e \cite{DeSilva2004} viene mostrato come sia possibile parametrizzare i dati così selezionati in un cerchio, detto primario. In \cref{fig:primarycircle} lo vediamo rappresentato insieme alle patch che lo compongono.
 
 % TODO draw primary circle
-% \begin{figure}[ht]
-%   \begin{center}
-%     \includegraphics[width=.8\linewidth]{gfx/image_patches_k300.pdf}
-%     \caption{L'omologia persistente di $X(300,30)$}
-%     \label{fig:k300persistence}
-%   \end{center}
-% \end{figure}
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.4\linewidth]{gfx/primarycircle_labels.pdf}
+    \caption{Le patch sul cerchio primario}
+    \label{fig:primarycircle}
+  \end{center}
+\end{figure}
 
 Se scegliamo un parametro $k$ più piccolo (e quindi selezioniamo punti più densi) vengono scoperte nuove strutture, come si vede dall'omologia persistente di $X(15,30)$ in \cref{fig:k15persistence} (presa da \cite{Carlsson2008}).
 
@@ -86,20 +92,32 @@ Se scegliamo un parametro $k$ più piccolo (e quindi selezioniamo punti più den
   \end{center}
 \end{figure}
 
-Vi sono diversi spazi topologici che hanno questa omologia, e cioé connessi con primo numero di Betti $\beta_1=5$, ad esempio lo spazio mostrato in \cref{fig:patchshape}. In \cite{Carlsson2008} viene data una parametrizzazione dei dati mediante spazi di polinomi, e con questi è possibile vedere che la forma rappresentate in \cref{fig:patchshape} è effettivamente corretta.
+Vi sono diversi spazi topologici che hanno questa omologia, e cioé connessi con primo numero di Betti $\beta_1=5$, ad esempio lo spazio mostrato in \cref{fig:patchshape}. In \cite{Carlsson2008} viene data una parametrizzazione dei dati mediante uno spazio di polinomi, e con questi è possibile vedere che la forma rappresentate in \cref{fig:patchshape} è effettivamente corretta.
 
 \begin{figure}[ht]
   \begin{center}
-    \includegraphics[width=.8\linewidth]{gfx/patches_shape.pdf}
+    \includegraphics[width=.4\linewidth]{gfx/patches_shape_labels.pdf}
     \caption{La struttura a tre cerchi $C_3$}
     \label{fig:patchshape}
   \end{center}
 \end{figure}
 
-Possiamo anche visualizzare le patch corrispondenti ai due nuovi cerchi (detti secondari).
+Possiamo anche visualizzare le patch corrispondenti ai due nuovi cerchi (detti secondari), in \cref{fig:secondarycircle}
 
-% TODO aggiungere i cerci secondari.
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.8\linewidth]{gfx/secondarycircles.pdf}
+    \caption{Le patch sui cerchi secondari}
+    \label{fig:secondarycircle}
+  \end{center}
+\end{figure}
 
 Infine, $X(15,30)$ è contenuto in un insieme di patch che forma una bottiglia di Klein, in \cref{fig:kleinpatch} vediamo come si dispongono i cerchi principali e secondari sulla bottoglia di Klein e come variano le patch.
 
-% TODO bottiglia di Klein.
+\begin{figure}[ht]
+  \begin{center}
+    \includegraphics[width=.6\linewidth]{gfx/kleinpatches.pdf}
+    \caption{Immersione di $C_3$ nella bottiglia di klein}
+    \label{fig:kleinpatch}
+  \end{center}
+\end{figure}

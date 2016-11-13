@@ -191,7 +191,9 @@ Per questo motivo si introduce il concetto di persistenza, che è un modo di con
   \emph{spazi topologici persistenti}, \emph{complessi simpliciali persistenti}, ecc.
 \end{definition}
 
-A questo punto è possibile associare un complesso simpliciale astratto ai nostri dati nel seguente modo.
+\begin{sloppypar}
+  A questo punto è possibile associare un complesso simpliciale astratto ai nostri dati nel seguente modo.
+\end{sloppypar}
 
 \begin{definition}
   Sia $X$ uno spazio metrico finito. Fissato un numero reale positivo $r$ il \emph{complesso di Vietoris-Rips} di $X$ è
@@ -274,7 +276,7 @@ e applicarvi $H_q(-,k)$ ottenendo
   H_q(VR(X,r_0))\to H_q(VR(X,r_1))\to H_q(VR(X,r_2))\to \dots
 \end{equation*}
 
-Il codice a barre persistente di $X$ allora è il codice a barre associato a $H_q(VR(X,-))$ mediante il \Cref{thm:persistentdecomposition}. Le barre lunghe di questo codice a barre sono considerate delle proprietà topologiche robuste di $X$ perché restano su più scale, mentre barre corte sono considerate rumore. Ad esempio nella \cref{fig:circle} mostrata nell'introduzione il codice a barre persistente di $H_0$ presenta una lunga barra, il che significa che l'insieme da un certo punto in poi è connesso, mentre il codice a barre di $H_1$ contiene una barra che compare intorno alla distanza tipica fra due punti vicini e scompare intorno a $\sqrt{3}$ volte il raggio, a rappresentare il fatto che l'insieme ha essenzialmente un buco. Il fatto che le barre corrispondenti ai loop in $H_1$ scompaiano a circa $\sqrt{3}$ volte il raggio lo si intuisce dalla \cref{fig:exhagon} disegnando il codice a barre di $H_1$ dell'esagono come si vede in \cref{fig:exhagonpersistence}.
+Il codice a barre persistente di $X$ allora è il codice a barre associato a $H_q(VR(X,-))$ mediante il \Cref{thm:persistentdecomposition}. Le barre lunghe di questo codice a barre sono considerate delle proprietà topologiche robuste di $X$ perché restano su più scale, mentre barre corte sono considerate rumore. Ad esempio nella \cref{fig2:circle} mostrata nell'introduzione il codice a barre persistente di $H_0$ presenta una lunga barra, il che significa che l'insieme da un certo punto in poi è connesso, mentre il codice a barre di $H_1$ contiene una barra che compare intorno alla distanza tipica fra due punti vicini e scompare intorno a $\sqrt{3}$ volte il raggio, a rappresentare il fatto che l'insieme ha essenzialmente un buco. Il fatto che le barre corrispondenti ai loop in $H_1$ scompaiano a circa $\sqrt{3}$ volte il raggio lo si intuisce dalla \cref{fig:exhagon} disegnando il codice a barre di $H_1$ dell'esagono come si vede in \cref{fig:exhagonpersistence}.
 
 Tuttavia, è possibile che un codice a barre persistente non mostri questa dualità fra barre lunghe e corte, ma presenti anche barre di lunghezza diversa.
 
@@ -362,11 +364,16 @@ Nell'ultimo esempio nella \cref{sec:functionalpersistence} si può notare che ab
 Tuttavia, sarebbe altrettanto valido fissare un parametro $r$ e costruire la filtrazione al variare di $\rho$ e calcolare l'omologia di questa. Più in generale, data qualunque funzione $f:X\to \R$ è possibile considerare le filtrazioni $VR(f^\shortleftarrow(-\infty,r],\rho)$ per valori fissati di $r$ o $\rho$ e calcolare il codice a barre persistente, tuttavia questo processo va contro il motivo iniziale per cui era stata introdotta l'omologia persistente: evitare di scegliere la scala di grandezza.
 
 Si osservi che se $r<s$ e $\rho<\sigma$, allora
-$VR(f^\shortleftarrow(-\infty,r],\rho)\into VR(f^\shortleftarrow(-\infty,s],\sigma)$ induce
+\begin{equation*}
+  VR(f^\shortleftarrow(-\infty,r],\rho)\into VR(f^\shortleftarrow(-\infty,s],\sigma)
+\end{equation*}
+induce
 una mappa $H_q(VR(f^\shortleftarrow(-\infty,r],\rho))\to H_q(VR(f^\shortleftarrow(-\infty,s],\sigma))$, quindi abbiamo a che fare essenzialmente con una filtrazione a più parametri, detta \emph{multifiltrazione} (vd. \cref{def:multifiltration}). Lo studio dell'omologia di una multifiltrazione è detto \emph{persistenza multidimensionale} di cui mostreremo brevemente i principali risultati seguendo \cite{Carlsson2009a}.
 Anticipiamo già che non è possibile trovare risultati come il \Cref{thm:persistentdecomposition} che garantiscono l'esistenza di invarianti completi.
 
-L'oggetto di studio della persistenza multidimensionale sono i moduli persistenti indicizzati da un insieme con un ordine quasi-parziale.\footnote{Si confronti con \cref{def:persistentset}, dove l'insieme degli indici è totalmente ordinato, $\R$}
+\begin{sloppypar}
+  L'oggetto di studio della persistenza multidimensionale sono i moduli persistenti indicizzati da un insieme con un ordine quasi-parziale.\footnote{Si confronti con \cref{def:persistentset}, dove l'insieme degli indici è totalmente ordinato, $\R$}
+\end{sloppypar}
 
 Dati $u,v\in\N^n$, diciamo che $u\lesssim v$ se $u_i \leq v_i$ per ogni $1\leq i\leq n$.
 
